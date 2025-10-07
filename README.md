@@ -1,20 +1,66 @@
 # Behensp - Premium Indian Wedding Logistics Platform
 
-A comprehensive e-commerce platform designed specifically for Indian wedding logistics, offering customizable ritual kits, premium rental services, intelligent planning tools, and AI-powered assistance.
+**"Wedding Rituals and Tradition, Simplified"**
 
-## 🌟 Features
+A premium, luxury e-commerce platform that simplifies the logistical and material complexities of Indian weddings. We are not merely a store; we are a comprehensive planning tool, a personalized concierge, and a trusted partner that allows modern families to honour rich cultural traditions with convenience, elegance, and peace of mind.
 
-### Core Features
+## 🌟 Brand Essence
+
+For modern Indian families, we are the premium e-commerce platform that provides culturally-authentic, fully customizable ritual kits and logistical solutions, delivering a sense of control and luxury that fragmented local markets and impersonal online giants cannot offer.
+
+## ✨ Core Features
+
+### Guided Onboarding Experience
+- **Cultural Traditions Selection**: Choose from Punjabi, Tamil, Bengali, Maharashtrian, Gujarati, South Indian, and more
+- **Wedding Planning**: Set your wedding date and select events (Roka, Mehendi, Haldi, Sangeet, Wedding, Reception)
+- **Personalized Journey**: Tailored recommendations based on your cultural preferences
+
+### Premium Product Catalog
 - **Customizable Ritual Kits**: Traditional ceremony kits with region-specific options
 - **Premium Rental Service**: Designer attire, jewelry, and decor items
 - **Multi-Checklist Planner**: Comprehensive wedding task management
 - **Live Cost Calculator**: Real-time budget estimation in INR
-- **AI Concierge Chatbot**: 24/7 intelligent assistance
-- **Secure Payment Gateway**: Razorpay integration with multiple payment methods
 
-### Target Users
-- **B2C**: Modern couples planning their wedding
-- **B2B**: Professional wedding planners and event organizers
+### Saathi - Your AI Wedding Concierge
+- **24/7 Intelligent Assistance**: Context-aware suggestions and cultural guidance
+- **Proactive Support**: Personalized recommendations based on your selections
+- **Cultural Knowledge**: Answer questions about wedding rituals and traditions
+
+### Secure & Convenient
+- **Razorpay Payment Gateway**: Multiple payment methods including UPI, cards, net banking, and EMI
+- **B2B Portal**: Dedicated services for professional wedding planners
+
+## 🎨 Design Philosophy
+
+### Typography
+- **Headings**: Playfair Display (elegant serif for sophistication)
+- **Body Text**: Merriweather (highly readable serif for all content)
+- **Accent**: Lora (for special elements)
+
+### Color Palette
+- **Primary**: Emerald Green (#0D5B41) - Deep, luxurious accent
+- **Gold**: Metallic Gold (#C9B068) - Luxury highlights and decorative elements
+- **Background**: Warm Ivory (#FDF8F0) - Generous white space
+- **Text**: Charcoal Grey (#333333) - Soft, easy-to-read primary text
+- **White**: Pure White (#FFFFFF) - Card backgrounds
+
+### User Experience
+- Clean, sophisticated, and reassuring design
+- Generous white space for calm, organized feel
+- Elegant serif typography throughout
+- High-quality imagery showcasing cultural context
+
+## 🎯 Target Users
+
+### Primary (B2C)
+- Modern couples planning their wedding
+- Families honoring cultural traditions
+- Tech-savvy users seeking convenience
+
+### Secondary (B2B)
+- Professional wedding planners
+- Event management companies
+- Bulk requirement businesses
 
 ## 🚀 Quick Start
 

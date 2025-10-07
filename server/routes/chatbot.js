@@ -4,9 +4,9 @@ const router = express.Router();
 // AI Chatbot responses (in production, integrate with OpenAI or similar)
 const knowledgeBase = {
   greetings: [
-    "Namaste! Welcome to our wedding planning platform. How may I assist you today?",
-    "Hello! I'm your AI wedding concierge. I'm here to help make your special day perfect!",
-    "Welcome! I'm here to guide you through your wedding planning journey. What would you like to know?"
+    "Namaste! I'm Saathi, your wedding concierge. How may I guide you through your beautiful journey today?",
+    "Hello! I'm Saathi, and I'm here to help make your special day perfect. What would you like to explore?",
+    "Welcome! I'm Saathi, your trusted companion for wedding planning. How can I assist you today?"
   ],
   ritualKits: {
     general: "We offer a wide range of ritual kits for Indian weddings including Haldi, Mehendi, Saptapadi, and regional variations. Each kit is customizable to your needs.",
