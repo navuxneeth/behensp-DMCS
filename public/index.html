@@ -1757,18 +1757,37 @@
                                 <h4 class="cart-item-name">${item.name}</h4>
                                 <p class="cart-item-category">${item.category}</p>
                                 <div class="quantity-controls">
-                                    <button class="quantity-btn" onclick="updateQuantity('${item.id}', -1)">-</button>
+                                    <button class="quantity-btn decrease-btn" data-id="${item.id}">-</button>
                                     <input type="number" class="quantity-input" value="${item.quantity}" readonly>
-                                    <button class="quantity-btn" onclick="updateQuantity('${item.id}', 1)">+</button>
+                                    <button class="quantity-btn increase-btn" data-id="${item.id}">+</button>
                                 </div>
                                 <div class="cart-item-price">₹${(item.price * item.quantity).toLocaleString()}</div>
-                                <button class="remove-item-btn" onclick="removeFromCart('${item.id}')">Remove</button>
+                                <button class="remove-item-btn" data-id="${item.id}">Remove</button>
                             </div>
                         `).join('')}
                     </div>
                 `;
             }
-            
+
+            // Attach event listeners to quantity buttons and remove buttons
+            container.querySelectorAll('.decrease-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const id = btn.getAttribute('data-id');
+                    updateQuantity(id, -1);
+                });
+            });
+            container.querySelectorAll('.increase-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const id = btn.getAttribute('data-id');
+                    updateQuantity(id, 1);
+                });
+            });
+            container.querySelectorAll('.remove-item-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const id = btn.getAttribute('data-id');
+                    removeFromCart(id);
+                });
+            });
             updateCartSummary();
         }
 
