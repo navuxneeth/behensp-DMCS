@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Behensp - Premium Indian Wedding Logistics Platform</title>
+    <meta name="description" content="Your one-stop solution for Indian wedding planning - Ritual kits, rental services, and expert guidance">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #d4af37;
+            --secondary-color: #8b0000;
+            --accent-color: #ff6b6b;
+            --text-dark: #2c3e50;
+            --text-light: #7f8c8d;
+            --bg-light: #fef9f3;
+            --white: #ffffff;
+            --shadow: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+        }
+
+        .navbar {
+            background: var(--white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            cursor: pointer;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
+
+        .btn {
+            padding: 0.6rem 1.5rem;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-color), #c5a028);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary-color);
+            color: var(--white);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, rgba(139, 0, 0, 0.9), rgba(212, 175, 55, 0.8)),
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23fef9f3" width="1200" height="600"/></svg>');
+            color: var(--white);
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .section {
+            margin-bottom: 4rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 4rem;
+        }
+
+        .product-content {
+            padding: 1.5rem;
+        }
+
+        .product-title {
+            font-size: 1.3rem;
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .product-description {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .product-price {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .product-badge {
+            display: inline-block;
+            background: var(--accent-color);
+            color: var(--white);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .calculator {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .cost-result {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .cost-amount {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            font-weight: 700;
+        }
+
+        .chatbot-button {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            border: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            box-shadow: var(--shadow-lg);
+            transition: transform 0.3s;
+            z-index: 999;
+        }
+
+        .chatbot-button:hover {
+            transform: scale(1.1);
+        }
+
+        .chatbot-window {
+            position: fixed;
+            bottom: 100px;
+            right: 2rem;
+            width: 350px;
+            height: 500px;
+            background: var(--white);
+            border-radius: 15px;
+            box-shadow: var(--shadow-lg);
+            display: none;
+            flex-direction: column;
+            z-index: 999;
+        }
+
+        .chatbot-window.active {
+            display: flex;
+        }
+
+        .chatbot-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            padding: 1rem;
+            border-radius: 15px 15px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chatbot-messages {
+            flex: 1;
+            padding: 1rem;
+            overflow-y: auto;
+        }
+
+        .message {
+            margin-bottom: 1rem;
+            padding: 0.75rem;
+            border-radius: 10px;
+            max-width: 80%;
+        }
+
+        .message.bot {
+            background: var(--bg-light);
+            margin-right: auto;
+        }
+
+        .message.user {
+            background: var(--primary-color);
+            color: var(--white);
+            margin-left: auto;
+        }
+
+        .chatbot-input {
+            display: flex;
+            padding: 1rem;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .chatbot-input input {
+            flex: 1;
+            padding: 0.75rem;
+            border: 1px solid #e0e0e0;
+            border-radius: 20px;
+            margin-right: 0.5rem;
+        }
+
+        .chatbot-input button {
+            padding: 0.75rem 1.5rem;
+            background: var(--primary-color);
+            color: var(--white);
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .footer {
+            background: var(--text-dark);
+            color: var(--white);
+            padding: 3rem 2rem 1rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: var(--white);
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .chatbot-window {
+                width: calc(100% - 2rem);
+                right: 1rem;
+            }
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-light);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Behensp<span>.</span></div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#ritual-kits" class="nav-link">Ritual Kits</a></li>
+                <li><a href="#rental" class="nav-link">Rental</a></li>
+                <li><a href="#calculator" class="nav-link">Calculator</a></li>
+                <li><a href="#checklist" class="nav-link">Checklist</a></li>
+                <li><button class="btn btn-primary" onclick="showLoginModal()">Login</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Your Dream Wedding Awaits</h1>
+            <p>Premium Indian Wedding Logistics Platform - From Ritual Kits to Rental Services, We've Got Everything Covered</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollToSection('ritual-kits')">Explore Ritual Kits</button>
+                <button class="btn btn-outline" onclick="scrollToSection('calculator')">Calculate Budget</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <section class="section">
+            <div class="section-header">
+                <h2>Why Choose Behensp?</h2>
+                <p>Your trusted partner for a perfect Indian wedding celebration</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎁</div>
+                    <h3>Customizable Kits</h3>
+                    <p>Traditional ritual kits tailored to your preferences and regional customs</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👗</div>
+                    <h3>Premium Rentals</h3>
+                    <p>Designer attire and jewelry at affordable rental rates</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📋</div>
+                    <h3>Smart Planning</h3>
+                    <p>Multi-checklist planner to keep you organized</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>Live Calculator</h3>
+                    <p>Real-time budget estimation in INR</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>AI Concierge</h3>
+                    <p>24/7 chatbot assistance for all your queries</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Secure Payments</h3>
+                    <p>Safe transactions via Razorpay gateway</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="ritual-kits">
+            <div class="section-header">
+                <h2>Traditional Ritual Kits</h2>
+                <p>Curated collections for every ceremony</p>
+            </div>
+            <div id="ritual-kits-grid" class="products-grid">
+                <div class="loading">Loading ritual kits...</div>
+            </div>
+        </section>
+
+        <section class="section" id="rental">
+            <div class="section-header">
+                <h2>Premium Rental Services</h2>
+                <p>Exquisite attire and jewelry for your special day</p>
+            </div>
+            <div id="rental-grid" class="products-grid">
+                <div class="loading">Loading rental items...</div>
+            </div>
+        </section>
+
+        <section class="section" id="calculator">
+            <div class="section-header">
+                <h2>Wedding Budget Calculator</h2>
+                <p>Get an instant estimate of your wedding costs in INR</p>
+            </div>
+            <div class="calculator">
+                <form id="calculator-form">
+                    <div class="form-group">
+                        <label for="guestCount">Number of Guests</label>
+                        <input type="number" id="guestCount" class="form-control" placeholder="e.g., 200" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="venue">Venue Quality</label>
+                        <select id="venue" class="form-control" required>
+                            <option value="">Select...</option>
+                            <option value="basic">Basic</option>
+                            <option value="standard">Standard</option>
+                            <option value="premium">Premium</option>
+                            <option value="luxury">Luxury</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="catering">Catering Quality</label>
+                        <select id="catering" class="form-control" required>
+                            <option value="">Select...</option>
+                            <option value="basic">Basic</option>
+                            <option value="standard">Standard</option>
+                            <option value="premium">Premium</option>
+                            <option value="luxury">Luxury</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="numberOfEvents">Number of Events</label>
+                        <input type="number" id="numberOfEvents" class="form-control" value="3" min="1" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Calculate Budget</button>
+                </form>
+                <div id="calculator-result" class="cost-result hidden">
+                    <h3>Estimated Wedding Cost</h3>
+                    <div class="cost-amount" id="total-cost">₹0</div>
+                    <p>Per Guest: <span id="per-guest-cost">₹0</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="checklist">
+            <div class="section-header">
+                <h2>Wedding Planning Checklist</h2>
+                <p>Stay organized with our comprehensive task manager</p>
+            </div>
+            <div class="calculator">
+                <form id="checklist-form">
+                    <div class="form-group">
+                        <label for="brideName">Bride's Name</label>
+                        <input type="text" id="brideName" class="form-control" placeholder="Enter bride's name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="groomName">Groom's Name</label>
+                        <input type="text" id="groomName" class="form-control" placeholder="Enter groom's name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="weddingDate">Wedding Date</label>
+                        <input type="date" id="weddingDate" class="form-control" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Generate Checklist</button>
+                </form>
+                <div id="checklist-result" class="hidden" style="margin-top: 2rem;">
+                    <h3>Your Personalized Checklist</h3>
+                    <p>A comprehensive checklist has been created for your wedding! Download the full checklist or access it from your dashboard.</p>
+                    <button class="btn btn-primary" onclick="alert('Checklist saved to your account!')">Save to Dashboard</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Behensp</h3>
+                <p>Your trusted partner for premium Indian wedding planning. We bring tradition and modern convenience together.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#ritual-kits">Ritual Kits</a></li>
+                    <li><a href="#rental">Rental Services</a></li>
+                    <li><a href="#calculator">Budget Calculator</a></li>
+                    <li><a href="#checklist">Wedding Planner</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">B2B Services</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul class="footer-links">
+                    <li>📧 info@behensp.com</li>
+                    <li>📞 +91 98765 43210</li>
+                    <li>📍 Mumbai, India</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Behensp. All rights reserved. | Privacy Policy | Terms of Service</p>
+        </div>
+    </footer>
+
+    <button class="chatbot-button" onclick="toggleChatbot()">💬</button>
+
+    <div class="chatbot-window" id="chatbot">
+        <div class="chatbot-header">
+            <h3>AI Concierge</h3>
+            <button onclick="toggleChatbot()" style="background: transparent; border: none; color: white; cursor: pointer; font-size: 1.5rem;">×</button>
+        </div>
+        <div class="chatbot-messages" id="chatbot-messages">
+            <div class="message bot">
+                Namaste! 🙏 Welcome to Behensp. How may I assist you with your wedding planning today?
+            </div>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="chatbot-input-field" placeholder="Type your message..." onkeypress="handleChatKeyPress(event)">
+            <button onclick="sendChatMessage()">Send</button>
+        </div>
+    </div>
+
+    <script>
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function toggleChatbot() {
+            const chatbot = document.getElementById('chatbot');
+            chatbot.classList.toggle('active');
+        }
+
+        function handleChatKeyPress(event) {
+            if (event.key === 'Enter') {
+                sendChatMessage();
+            }
+        }
+
+        async function sendChatMessage() {
+            const input = document.getElementById('chatbot-input-field');
+            const message = input.value.trim();
+            
+            if (!message) return;
+
+            const messagesContainer = document.getElementById('chatbot-messages');
+            
+            const userMessage = document.createElement('div');
+            userMessage.className = 'message user';
+            userMessage.textContent = message;
+            messagesContainer.appendChild(userMessage);
+            
+            input.value = '';
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+
+            try {
+                const response = await fetch('/api/chatbot/chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ message })
+                });
+                
+                const data = await response.json();
+                
+                const botMessage = document.createElement('div');
+                botMessage.className = 'message bot';
+                botMessage.textContent = data.message;
+                messagesContainer.appendChild(botMessage);
+                
+                messagesContainer.scrollTop = messagesContainer.scrollHeight;
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+
+        async function loadRitualKits() {
+            try {
+                const response = await fetch('/api/ritual-kits?popular=true');
+                const kits = await response.json();
+                
+                const grid = document.getElementById('ritual-kits-grid');
+                grid.innerHTML = kits.slice(0, 3).map(kit => `
+                    <div class="product-card">
+                        <div class="product-image">${kit.name.includes('Haldi') ? '🌼' : kit.name.includes('Mehendi') ? '✋' : '🕉️'}</div>
+                        <div class="product-content">
+                            ${kit.isPopular ? '<span class="product-badge">Popular</span>' : ''}
+                            <h3 class="product-title">${kit.name}</h3>
+                            <p class="product-description">${kit.description}</p>
+                            <div class="product-price">₹${kit.basePrice.toLocaleString()}</div>
+                            <button class="btn btn-primary" style="margin-top: 1rem; width: 100%;">View Details</button>
+                        </div>
+                    </div>
+                `).join('');
+            } catch (error) {
+                console.error('Error loading ritual kits:', error);
+            }
+        }
+
+        async function loadRentalItems() {
+            try {
+                const response = await fetch('/api/rental?available=true');
+                const items = await response.json();
+                
+                const grid = document.getElementById('rental-grid');
+                grid.innerHTML = items.slice(0, 3).map(item => `
+                    <div class="product-card">
+                        <div class="product-image">${item.category.includes('Bridal') ? '👰' : item.category.includes('Groom') ? '🤵' : '💍'}</div>
+                        <div class="product-content">
+                            <h3 class="product-title">${item.name}</h3>
+                            <p class="product-description">${item.description.substring(0, 80)}...</p>
+                            <div class="product-price">₹${item.dailyRentalPrice.toLocaleString()}/day</div>
+                            <button class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Check Availability</button>
+                        </div>
+                    </div>
+                `).join('');
+            } catch (error) {
+                console.error('Error loading rental items:', error);
+            }
+        }
+
+        document.getElementById('calculator-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const formData = {
+                guestCount: parseInt(document.getElementById('guestCount').value),
+                venue: document.getElementById('venue').value,
+                catering: document.getElementById('catering').value,
+                numberOfEvents: parseInt(document.getElementById('numberOfEvents').value),
+                decoration: document.getElementById('venue').value,
+                photography: 'standard',
+                brideAttire: 'standard',
+                groomAttire: 'standard',
+                jewelry: 'standard',
+                jewelryType: 'rental',
+                rituals: 'standard',
+                entertainment: 'standard'
+            };
+
+            try {
+                const response = await fetch('/api/calculator/estimate', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(formData)
+                });
+                
+                const data = await response.json();
+                
+                document.getElementById('total-cost').textContent = `₹${data.total.toLocaleString()}`;
+                document.getElementById('per-guest-cost').textContent = `₹${data.perGuestCost.toLocaleString()}`;
+                document.getElementById('calculator-result').classList.remove('hidden');
+            } catch (error) {
+                console.error('Error calculating budget:', error);
+            }
+        });
+
+        document.getElementById('checklist-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const formData = {
+                brideName: document.getElementById('brideName').value,
+                groomName: document.getElementById('groomName').value,
+                weddingDate: document.getElementById('weddingDate').value,
+                isB2B: false
+            };
+
+            try {
+                const response = await fetch('/api/checklist/create', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(formData)
+                });
+                
+                const data = await response.json();
+                
+                document.getElementById('checklist-result').classList.remove('hidden');
+            } catch (error) {
+                console.error('Error creating checklist:', error);
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadRitualKits();
+            loadRentalItems();
+        });
+
+        function showLoginModal() {
+            alert('Login functionality coming soon! This would integrate with the authentication system.');
+        }
+    </script>
+</body>
+</html>
