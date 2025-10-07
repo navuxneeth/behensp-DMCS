@@ -7,7 +7,7 @@
     <meta name="description" content="Your one-stop solution for Indian wedding planning - Ritual kits, rental services, and expert guidance">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lora:wght@400;500;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -16,20 +16,20 @@
         }
 
         :root {
-            --primary-color: #d4af37;
-            --secondary-color: #8b0000;
-            --accent-color: #ff6b6b;
-            --text-dark: #2c3e50;
-            --text-light: #7f8c8d;
-            --bg-light: #fef9f3;
+            --primary-color: #0D5B41;
+            --secondary-color: #0D5B41;
+            --accent-gold: #C9B068;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --bg-light: #FDF8F0;
             --white: #ffffff;
-            --shadow: 0 4px 6px rgba(0,0,0,0.1);
-            --shadow-lg: 0 10px 30px rgba(0,0,0,0.15);
+            --shadow: 0 2px 8px rgba(0,0,0,0.08);
+            --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
+            font-family: 'Merriweather', serif;
+            line-height: 1.8;
             color: var(--text-dark);
             background-color: var(--bg-light);
         }
@@ -37,6 +37,7 @@
         h1, h2, h3, h4, h5, h6 {
             font-family: 'Playfair Display', serif;
             font-weight: 600;
+            letter-spacing: 0.5px;
         }
 
         .navbar {
@@ -88,60 +89,68 @@
         }
 
         .btn {
-            padding: 0.6rem 1.5rem;
+            padding: 0.9rem 2.5rem;
             border: none;
-            border-radius: 25px;
+            border-radius: 4px;
             cursor: pointer;
             font-weight: 500;
+            font-family: 'Merriweather', serif;
             transition: all 0.3s;
             text-decoration: none;
             display: inline-block;
+            font-size: 1rem;
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, var(--primary-color), #c5a028);
+            background: var(--primary-color);
             color: var(--white);
         }
 
         .btn-primary:hover {
+            background: #0a4a35;
             transform: translateY(-2px);
             box-shadow: var(--shadow-lg);
         }
 
         .btn-outline {
             background: transparent;
-            border: 2px solid var(--primary-color);
-            color: var(--primary-color);
+            border: 2px solid var(--white);
+            color: var(--white);
         }
 
         .btn-outline:hover {
-            background: var(--primary-color);
-            color: var(--white);
+            background: rgba(255, 255, 255, 0.15);
+            border-color: var(--white);
         }
 
         .hero {
-            background: linear-gradient(135deg, rgba(139, 0, 0, 0.9), rgba(212, 175, 55, 0.8)),
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23fef9f3" width="1200" height="600"/></svg>');
+            background: linear-gradient(135deg, rgba(13, 91, 65, 0.92), rgba(201, 176, 104, 0.85)),
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23FDF8F0" width="1200" height="600"/></svg>');
             color: var(--white);
-            padding: 6rem 2rem;
+            padding: 8rem 2rem;
             text-align: center;
         }
 
         .hero-content {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
         }
 
         .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            font-size: 3.8rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            line-height: 1.3;
         }
 
         .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            opacity: 0.95;
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            opacity: 0.97;
+            line-height: 1.8;
+            max-width: 850px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .hero-buttons {
@@ -154,42 +163,47 @@
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 4rem 2rem;
+            padding: 5rem 3rem;
         }
 
         .section {
-            margin-bottom: 4rem;
+            margin-bottom: 6rem;
         }
 
         .section-header {
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 4rem;
         }
 
         .section-header h2 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             color: var(--secondary-color);
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            letter-spacing: 0.5px;
         }
 
         .section-header p {
             color: var(--text-light);
-            font-size: 1.1rem;
+            font-size: 1.15rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
         }
 
         .feature-card {
             background: var(--white);
-            padding: 2rem;
-            border-radius: 15px;
+            padding: 3rem 2.5rem;
+            border-radius: 8px;
             box-shadow: var(--shadow);
             transition: transform 0.3s, box-shadow 0.3s;
             text-align: center;
+            border-top: 3px solid var(--accent-gold);
         }
 
         .feature-card:hover {
@@ -198,24 +212,29 @@
         }
 
         .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
         }
 
         .feature-card h3 {
             color: var(--secondary-color);
             margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .feature-card p {
+            line-height: 1.8;
         }
 
         .products-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 3rem;
         }
 
         .product-card {
             background: var(--white);
-            border-radius: 15px;
+            border-radius: 8px;
             overflow: hidden;
             box-shadow: var(--shadow);
             transition: transform 0.3s, box-shadow 0.3s;
@@ -229,45 +248,50 @@
 
         .product-image {
             width: 100%;
-            height: 200px;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            height: 220px;
+            background: linear-gradient(135deg, rgba(13, 91, 65, 0.1), rgba(201, 176, 104, 0.15));
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--white);
-            font-size: 4rem;
+            color: var(--primary-color);
+            font-size: 4.5rem;
         }
 
         .product-content {
-            padding: 1.5rem;
+            padding: 2rem;
         }
 
         .product-title {
-            font-size: 1.3rem;
+            font-size: 1.35rem;
             color: var(--secondary-color);
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.75rem;
         }
 
         .product-description {
             color: var(--text-light);
             font-size: 0.95rem;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
         }
 
         .product-price {
-            font-size: 1.5rem;
-            color: var(--primary-color);
+            font-size: 1.6rem;
+            color: var(--accent-gold);
             font-weight: 600;
+            font-family: 'Lora', serif;
         }
 
         .product-badge {
             display: inline-block;
-            background: var(--accent-color);
+            background: var(--accent-gold);
             color: var(--white);
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            margin-bottom: 0.5rem;
+            padding: 0.4rem 1rem;
+            border-radius: 3px;
+            font-size: 0.75rem;
+            margin-bottom: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
         }
 
         .calculator {
@@ -323,32 +347,34 @@
             width: 60px;
             height: 60px;
             border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            background: var(--primary-color);
             color: var(--white);
             border: none;
             cursor: pointer;
             font-size: 1.5rem;
             box-shadow: var(--shadow-lg);
-            transition: transform 0.3s;
+            transition: transform 0.3s, background 0.3s;
             z-index: 999;
         }
 
         .chatbot-button:hover {
             transform: scale(1.1);
+            background: #0a4a35;
         }
 
         .chatbot-window {
             position: fixed;
             bottom: 100px;
             right: 2rem;
-            width: 350px;
-            height: 500px;
+            width: 380px;
+            height: 550px;
             background: var(--white);
-            border-radius: 15px;
-            box-shadow: var(--shadow-lg);
+            border-radius: 8px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.15);
             display: none;
             flex-direction: column;
             z-index: 999;
+            border: 1px solid rgba(201, 176, 104, 0.2);
         }
 
         .chatbot-window.active {
@@ -356,13 +382,18 @@
         }
 
         .chatbot-header {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            background: var(--primary-color);
             color: var(--white);
-            padding: 1rem;
-            border-radius: 15px 15px 0 0;
+            padding: 1.25rem;
+            border-radius: 8px 8px 0 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
+        }
+
+        .chatbot-header h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
         }
 
         .chatbot-messages {
@@ -487,6 +518,179 @@
             padding: 2rem;
             color: var(--text-light);
         }
+
+        /* Onboarding Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.6);
+            overflow-y: auto;
+        }
+
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background-color: var(--white);
+            margin: 2rem auto;
+            padding: 0;
+            border-radius: 8px;
+            max-width: 700px;
+            width: 90%;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .modal-header {
+            background: linear-gradient(135deg, rgba(13, 91, 65, 0.95), rgba(201, 176, 104, 0.9));
+            color: var(--white);
+            padding: 2rem;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .modal-header h2 {
+            margin: 0;
+            font-size: 2rem;
+            color: var(--white);
+        }
+
+        .modal-header p {
+            margin: 0.5rem 0 0 0;
+            opacity: 0.95;
+        }
+
+        .modal-body {
+            padding: 2.5rem;
+        }
+
+        .onboarding-step {
+            display: none;
+        }
+
+        .onboarding-step.active {
+            display: block;
+        }
+
+        .onboarding-question {
+            margin-bottom: 2rem;
+        }
+
+        .onboarding-question label {
+            display: block;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+            font-weight: 500;
+        }
+
+        .tradition-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tradition-option {
+            padding: 1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            background: var(--white);
+        }
+
+        .tradition-option:hover {
+            border-color: var(--accent-gold);
+        }
+
+        .tradition-option.selected {
+            border-color: var(--primary-color);
+            background: rgba(13, 91, 65, 0.05);
+        }
+
+        .tradition-option input[type="checkbox"] {
+            display: none;
+        }
+
+        .event-options {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .event-option {
+            padding: 1rem 1.5rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+        }
+
+        .event-option:hover {
+            border-color: var(--accent-gold);
+        }
+
+        .event-option.selected {
+            border-color: var(--primary-color);
+            background: rgba(13, 91, 65, 0.05);
+        }
+
+        .event-option input[type="checkbox"] {
+            margin-right: 1rem;
+        }
+
+        .modal-footer {
+            padding: 1.5rem 2.5rem;
+            border-top: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .btn-secondary {
+            background: #e0e0e0;
+            color: var(--text-dark);
+            padding: 0.9rem 2rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: 'Merriweather', serif;
+            transition: all 0.3s;
+        }
+
+        .btn-secondary:hover {
+            background: #d0d0d0;
+        }
+
+        .progress-dots {
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        .progress-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #e0e0e0;
+        }
+
+        .progress-dot.active {
+            background: var(--primary-color);
+        }
     </style>
 </head>
 <body>
@@ -504,13 +708,134 @@
         </div>
     </nav>
 
+    <!-- Onboarding Modal -->
+    <div class="modal" id="onboardingModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Let's Begin Your Journey</h2>
+                <p>We'll help you create a personalized wedding experience</p>
+            </div>
+            <div class="modal-body">
+                <div class="progress-dots">
+                    <span class="progress-dot active"></span>
+                    <span class="progress-dot"></span>
+                    <span class="progress-dot"></span>
+                </div>
+
+                <!-- Step 1: Cultural Traditions -->
+                <div class="onboarding-step active" id="step1">
+                    <div class="onboarding-question">
+                        <label>Which cultural traditions are you honouring?</label>
+                        <p style="color: var(--text-light); margin-bottom: 1.5rem;">Select all that apply</p>
+                        <div class="tradition-options">
+                            <div class="tradition-option" onclick="toggleTradition('punjabi')">
+                                <input type="checkbox" id="tradition-punjabi" value="punjabi">
+                                <div style="font-size: 2rem; margin-bottom: 0.5rem;">🪔</div>
+                                <div>Punjabi</div>
+                            </div>
+                            <div class="tradition-option" onclick="toggleTradition('tamil')">
+                                <input type="checkbox" id="tradition-tamil" value="tamil">
+                                <div style="font-size: 2rem; margin-bottom: 0.5rem;">🌺</div>
+                                <div>Tamil</div>
+                            </div>
+                            <div class="tradition-option" onclick="toggleTradition('bengali')">
+                                <input type="checkbox" id="tradition-bengali" value="bengali">
+                                <div style="font-size: 2rem; margin-bottom: 0.5rem;">🪷</div>
+                                <div>Bengali</div>
+                            </div>
+                            <div class="tradition-option" onclick="toggleTradition('maharashtrian')">
+                                <input type="checkbox" id="tradition-maharashtrian" value="maharashtrian">
+                                <div style="font-size: 2rem; margin-bottom: 0.5rem;">🕉️</div>
+                                <div>Maharashtrian</div>
+                            </div>
+                            <div class="tradition-option" onclick="toggleTradition('gujarati')">
+                                <input type="checkbox" id="tradition-gujarati" value="gujarati">
+                                <div style="font-size: 2rem; margin-bottom: 0.5rem;">🎊</div>
+                                <div>Gujarati</div>
+                            </div>
+                            <div class="tradition-option" onclick="toggleTradition('south-indian')">
+                                <input type="checkbox" id="tradition-south-indian" value="south-indian">
+                                <div style="font-size: 2rem; margin-bottom: 0.5rem;">🪈</div>
+                                <div>South Indian</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2: Wedding Date -->
+                <div class="onboarding-step" id="step2">
+                    <div class="onboarding-question">
+                        <label>What is your estimated wedding date?</label>
+                        <input type="date" id="wedding-date" class="form-control" style="width: 100%; padding: 1rem; border: 2px solid #e0e0e0; border-radius: 6px; font-family: 'Merriweather', serif;">
+                    </div>
+                </div>
+
+                <!-- Step 3: Events -->
+                <div class="onboarding-step" id="step3">
+                    <div class="onboarding-question">
+                        <label>Which events are you planning?</label>
+                        <p style="color: var(--text-light); margin-bottom: 1.5rem;">Select all that apply</p>
+                        <div class="event-options">
+                            <div class="event-option" onclick="toggleEvent('roka')">
+                                <input type="checkbox" id="event-roka" value="roka">
+                                <div>
+                                    <strong>Roka/Engagement</strong>
+                                    <div style="color: var(--text-light); font-size: 0.9rem;">The formal announcement</div>
+                                </div>
+                            </div>
+                            <div class="event-option" onclick="toggleEvent('mehendi')">
+                                <input type="checkbox" id="event-mehendi" value="mehendi">
+                                <div>
+                                    <strong>Mehendi</strong>
+                                    <div style="color: var(--text-light); font-size: 0.9rem;">The henna ceremony</div>
+                                </div>
+                            </div>
+                            <div class="event-option" onclick="toggleEvent('haldi')">
+                                <input type="checkbox" id="event-haldi" value="haldi">
+                                <div>
+                                    <strong>Haldi</strong>
+                                    <div style="color: var(--text-light); font-size: 0.9rem;">The turmeric ceremony</div>
+                                </div>
+                            </div>
+                            <div class="event-option" onclick="toggleEvent('sangeet')">
+                                <input type="checkbox" id="event-sangeet" value="sangeet">
+                                <div>
+                                    <strong>Sangeet</strong>
+                                    <div style="color: var(--text-light); font-size: 0.9rem;">The musical night</div>
+                                </div>
+                            </div>
+                            <div class="event-option" onclick="toggleEvent('wedding')">
+                                <input type="checkbox" id="event-wedding" value="wedding" checked>
+                                <div>
+                                    <strong>Wedding Ceremony</strong>
+                                    <div style="color: var(--text-light); font-size: 0.9rem;">The main ceremony</div>
+                                </div>
+                            </div>
+                            <div class="event-option" onclick="toggleEvent('reception')">
+                                <input type="checkbox" id="event-reception" value="reception">
+                                <div>
+                                    <strong>Reception</strong>
+                                    <div style="color: var(--text-light); font-size: 0.9rem;">The celebration dinner</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary" id="prevBtn" onclick="previousStep()" style="display: none;">Previous</button>
+                <button class="btn btn-primary" id="nextBtn" onclick="nextStep()">Next</button>
+            </div>
+        </div>
+    </div>
+
     <section class="hero" id="home">
         <div class="hero-content">
-            <h1>Your Dream Wedding Awaits</h1>
-            <p>Premium Indian Wedding Logistics Platform - From Ritual Kits to Rental Services, We've Got Everything Covered</p>
+            <h1>Wedding Rituals and Tradition, Simplified</h1>
+            <p>Your guide to a beautiful, stress-free wedding begins here. For modern Indian families, we provide culturally-authentic, fully customizable ritual kits and logistical solutions.</p>
             <div class="hero-buttons">
-                <button class="btn btn-primary" onclick="scrollToSection('ritual-kits')">Explore Ritual Kits</button>
-                <button class="btn btn-outline" onclick="scrollToSection('calculator')">Calculate Budget</button>
+                <button class="btn btn-primary" onclick="showOnboardingFlow()">Start Planning</button>
+                <button class="btn btn-outline" onclick="scrollToSection('ritual-kits')">Explore Our Collections</button>
             </div>
         </div>
     </section>
@@ -692,24 +1017,146 @@
 
     <div class="chatbot-window" id="chatbot">
         <div class="chatbot-header">
-            <h3>AI Concierge</h3>
+            <h3>Saathi - Your Wedding Concierge</h3>
             <button onclick="toggleChatbot()" style="background: transparent; border: none; color: white; cursor: pointer; font-size: 1.5rem;">×</button>
         </div>
         <div class="chatbot-messages" id="chatbot-messages">
             <div class="message bot">
-                Namaste! 🙏 Welcome to Behensp. How may I assist you with your wedding planning today?
+                Namaste! 🙏 I'm Saathi, your dedicated wedding concierge. I'm here to guide you through every step of your beautiful journey. How may I assist you today?
             </div>
         </div>
         <div class="chatbot-input">
-            <input type="text" id="chatbot-input-field" placeholder="Type your message..." onkeypress="handleChatKeyPress(event)">
+            <input type="text" id="chatbot-input-field" placeholder="Ask Saathi anything..." onkeypress="handleChatKeyPress(event)">
             <button onclick="sendChatMessage()">Send</button>
         </div>
     </div>
 
     <script>
+        let currentStep = 1;
+        let onboardingData = {
+            traditions: [],
+            weddingDate: '',
+            events: ['wedding']
+        };
+
         function scrollToSection(id) {
             document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
         }
+
+        function showOnboardingFlow() {
+            document.getElementById('onboardingModal').classList.add('active');
+            currentStep = 1;
+            updateStepDisplay();
+        }
+
+        function closeOnboardingModal() {
+            document.getElementById('onboardingModal').classList.remove('active');
+        }
+
+        function toggleTradition(tradition) {
+            const checkbox = document.getElementById('tradition-' + tradition);
+            const option = checkbox.parentElement;
+            
+            checkbox.checked = !checkbox.checked;
+            option.classList.toggle('selected');
+            
+            if (checkbox.checked) {
+                onboardingData.traditions.push(tradition);
+            } else {
+                onboardingData.traditions = onboardingData.traditions.filter(t => t !== tradition);
+            }
+        }
+
+        function toggleEvent(event) {
+            const checkbox = document.getElementById('event-' + event);
+            const option = checkbox.parentElement;
+            
+            checkbox.checked = !checkbox.checked;
+            option.classList.toggle('selected');
+            
+            if (checkbox.checked) {
+                if (!onboardingData.events.includes(event)) {
+                    onboardingData.events.push(event);
+                }
+            } else {
+                onboardingData.events = onboardingData.events.filter(e => e !== event);
+            }
+        }
+
+        function nextStep() {
+            if (currentStep === 1 && onboardingData.traditions.length === 0) {
+                alert('Please select at least one cultural tradition');
+                return;
+            }
+            
+            if (currentStep === 2) {
+                const dateInput = document.getElementById('wedding-date');
+                if (!dateInput.value) {
+                    alert('Please select your wedding date');
+                    return;
+                }
+                onboardingData.weddingDate = dateInput.value;
+            }
+
+            if (currentStep === 3) {
+                // Final step - save and redirect
+                localStorage.setItem('onboardingData', JSON.stringify(onboardingData));
+                closeOnboardingModal();
+                scrollToSection('ritual-kits');
+                return;
+            }
+
+            currentStep++;
+            updateStepDisplay();
+        }
+
+        function previousStep() {
+            if (currentStep > 1) {
+                currentStep--;
+                updateStepDisplay();
+            }
+        }
+
+        function updateStepDisplay() {
+            // Hide all steps
+            document.querySelectorAll('.onboarding-step').forEach(step => {
+                step.classList.remove('active');
+            });
+            
+            // Show current step
+            document.getElementById('step' + currentStep).classList.add('active');
+            
+            // Update progress dots
+            document.querySelectorAll('.progress-dot').forEach((dot, index) => {
+                if (index < currentStep) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+            
+            // Update buttons
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            
+            if (currentStep === 1) {
+                prevBtn.style.display = 'none';
+            } else {
+                prevBtn.style.display = 'block';
+            }
+            
+            if (currentStep === 3) {
+                nextBtn.textContent = 'Start Planning';
+            } else {
+                nextBtn.textContent = 'Next';
+            }
+        }
+
+        // Initialize selected event on load
+        window.addEventListener('DOMContentLoaded', function() {
+            const weddingOption = document.querySelector('#event-wedding').parentElement;
+            weddingOption.classList.add('selected');
+        });
 
         function toggleChatbot() {
             const chatbot = document.getElementById('chatbot');
