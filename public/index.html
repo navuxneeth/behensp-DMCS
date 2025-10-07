@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Behensp - Premium Indian Wedding Logistics Platform</title>
-    <meta name="description" content="Your one-stop solution for Indian wedding planning - Ritual kits, rental services, and expert guidance">
+    <title>Aarambh - Luxury Indian Wedding Solutions</title>
+    <meta name="description" content="Your one-stop solution for Indian wedding planning - Shaadi Boxes, rental services, and expert guidance">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lora:wght@400;500;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
@@ -16,12 +16,13 @@
         }
 
         :root {
-            --primary-color: #0D5B41;
-            --secondary-color: #0D5B41;
-            --accent-gold: #C9B068;
-            --text-dark: #333333;
+            --primary-maroon: #5C2121;
+            --bg-beige: #EAE0D1;
+            --accent-gold: #D4A037;
+            --dark-green: #2A402E;
+            --dark-blue: #1F2A40;
+            --text-dark: #1F2A40;
             --text-light: #666666;
-            --bg-light: #FDF8F0;
             --white: #ffffff;
             --shadow: 0 2px 8px rgba(0,0,0,0.08);
             --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
@@ -31,7 +32,7 @@
             font-family: 'Merriweather', serif;
             line-height: 1.8;
             color: var(--text-dark);
-            background-color: var(--bg-light);
+            background-color: var(--bg-beige);
         }
 
         h1, h2, h3, h4, h5, h6 {
@@ -62,11 +63,11 @@
             font-family: 'Playfair Display', serif;
             font-size: 1.8rem;
             font-weight: 700;
-            color: var(--secondary-color);
+            color: var(--primary-maroon);
         }
 
         .logo span {
-            color: var(--primary-color);
+            color: var(--accent-gold);
         }
 
         .nav-menu {
@@ -85,7 +86,7 @@
         }
 
         .nav-link:hover {
-            color: var(--primary-color);
+            color: var(--primary-maroon);
         }
 
         .btn {
@@ -102,12 +103,12 @@
         }
 
         .btn-primary {
-            background: var(--primary-color);
+            background: var(--primary-maroon);
             color: var(--white);
         }
 
         .btn-primary:hover {
-            background: #0a4a35;
+            background: #4a1818;
             transform: translateY(-2px);
             box-shadow: var(--shadow-lg);
         }
@@ -124,8 +125,7 @@
         }
 
         .hero {
-            background: linear-gradient(135deg, rgba(13, 91, 65, 0.92), rgba(201, 176, 104, 0.85)),
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23FDF8F0" width="1200" height="600"/></svg>');
+            background: var(--primary-maroon);
             color: var(--white);
             padding: 8rem 2rem;
             text-align: center;
@@ -163,11 +163,11 @@
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 5rem 3rem;
+            padding: 6rem 4rem;
         }
 
         .section {
-            margin-bottom: 6rem;
+            margin-bottom: 8rem;
         }
 
         .section-header {
@@ -177,7 +177,7 @@
 
         .section-header h2 {
             font-size: 2.8rem;
-            color: var(--secondary-color);
+            color: var(--primary-maroon);
             margin-bottom: 1rem;
             letter-spacing: 0.5px;
         }
@@ -193,7 +193,7 @@
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
+            gap: 4rem;
         }
 
         .feature-card {
@@ -217,7 +217,7 @@
         }
 
         .feature-card h3 {
-            color: var(--secondary-color);
+            color: var(--primary-maroon);
             margin-bottom: 1rem;
             font-size: 1.4rem;
         }
@@ -229,7 +229,7 @@
         .products-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 3rem;
+            gap: 4rem;
         }
 
         .product-card {
@@ -263,7 +263,7 @@
 
         .product-title {
             font-size: 1.35rem;
-            color: var(--secondary-color);
+            color: var(--primary-maroon);
             margin-bottom: 0.75rem;
         }
 
@@ -327,8 +327,8 @@
 
         .form-control:focus {
             outline: none;
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 3px rgba(13, 91, 65, 0.1);
+            border-color: var(--primary-maroon);
+            box-shadow: 0 0 0 3px rgba(92, 33, 33, 0.1);
         }
 
         .form-control:hover {
@@ -336,7 +336,7 @@
         }
 
         .cost-result {
-            background: linear-gradient(135deg, rgba(13, 91, 65, 0.05), rgba(201, 176, 104, 0.08));
+            background: var(--white);
             padding: 3rem;
             border-radius: 8px;
             margin-top: 2rem;
@@ -346,7 +346,7 @@
 
         .cost-amount {
             font-size: 3.5rem;
-            color: var(--primary-color);
+            color: var(--primary-maroon);
             font-weight: 700;
             font-family: 'Lora', serif;
         }
@@ -358,7 +358,7 @@
             width: 60px;
             height: 60px;
             border-radius: 50%;
-            background: var(--primary-color);
+            background: var(--primary-maroon);
             color: var(--white);
             border: none;
             cursor: pointer;
@@ -370,7 +370,7 @@
 
         .chatbot-button:hover {
             transform: scale(1.1);
-            background: #0a4a35;
+            background: #4a1818;
         }
 
         .chatbot-window {
@@ -393,7 +393,7 @@
         }
 
         .chatbot-header {
-            background: var(--primary-color);
+            background: var(--primary-maroon);
             color: var(--white);
             padding: 1.25rem;
             border-radius: 8px 8px 0 0;
@@ -421,12 +421,13 @@
         }
 
         .message.bot {
-            background: var(--bg-light);
+            background: var(--white);
             margin-right: auto;
+            border: 1px solid #e0e0e0;
         }
 
         .message.user {
-            background: var(--primary-color);
+            background: var(--primary-maroon);
             color: var(--white);
             margin-left: auto;
         }
@@ -455,7 +456,7 @@
         }
 
         .footer {
-            background: var(--text-dark);
+            background: var(--dark-blue);
             color: var(--white);
             padding: 3rem 2rem 1rem;
             margin-top: 4rem;
@@ -472,7 +473,7 @@
 
         .footer-section h3 {
             margin-bottom: 1rem;
-            color: var(--primary-color);
+            color: var(--accent-gold);
         }
 
         .footer-links {
@@ -501,6 +502,298 @@
             opacity: 0.8;
         }
 
+        /* Cart Styles */
+        .cart-button {
+            position: relative;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            padding: 0.5rem;
+            transition: color 0.3s;
+        }
+
+        .cart-button:hover {
+            color: var(--primary-maroon);
+        }
+
+        .cart-badge {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: var(--primary-maroon);
+            color: var(--white);
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            font-size: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Lora', serif;
+        }
+
+        .cart-modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.6);
+            overflow-y: auto;
+        }
+
+        .cart-modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cart-content {
+            background-color: var(--white);
+            margin: 2rem auto;
+            padding: 0;
+            border-radius: 8px;
+            max-width: 1200px;
+            width: 95%;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            max-height: 95vh;
+            overflow-y: auto;
+        }
+
+        .cart-header {
+            background: var(--primary-maroon);
+            color: var(--white);
+            padding: 2rem;
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cart-header h2 {
+            margin: 0;
+            font-size: 2rem;
+            color: var(--white);
+        }
+
+        .close-cart {
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 2rem;
+            cursor: pointer;
+            padding: 0;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            transition: background 0.3s;
+        }
+
+        .close-cart:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        .cart-filters {
+            display: flex;
+            gap: 1rem;
+            padding: 2rem 2rem 1rem 2rem;
+            border-bottom: 2px solid var(--bg-beige);
+        }
+
+        .filter-btn {
+            padding: 0.75rem 1.5rem;
+            border: 2px solid var(--accent-gold);
+            background: var(--white);
+            color: var(--text-dark);
+            border-radius: 6px;
+            cursor: pointer;
+            font-family: 'Merriweather', serif;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .filter-btn:hover {
+            background: var(--bg-beige);
+        }
+
+        .filter-btn.active {
+            background: var(--primary-maroon);
+            color: var(--white);
+            border-color: var(--primary-maroon);
+        }
+
+        .cart-items-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .cart-item {
+            background: var(--white);
+            border: 2px solid var(--bg-beige);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: box-shadow 0.3s;
+        }
+
+        .cart-item:hover {
+            box-shadow: var(--shadow-lg);
+        }
+
+        .cart-item-image {
+            width: 100%;
+            height: 150px;
+            background: var(--bg-beige);
+            border-radius: 6px;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-gold);
+            font-size: 3rem;
+        }
+
+        .cart-item-name {
+            font-size: 1.1rem;
+            color: var(--primary-maroon);
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        .cart-item-category {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .quantity-controls {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .quantity-btn {
+            width: 35px;
+            height: 35px;
+            border: 2px solid var(--accent-gold);
+            background: var(--white);
+            color: var(--text-dark);
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .quantity-btn:hover {
+            background: var(--primary-maroon);
+            color: var(--white);
+            border-color: var(--primary-maroon);
+        }
+
+        .quantity-input {
+            width: 60px;
+            text-align: center;
+            border: 2px solid var(--bg-beige);
+            border-radius: 6px;
+            padding: 0.5rem;
+            font-size: 1rem;
+            font-family: 'Lora', serif;
+        }
+
+        .cart-item-price {
+            font-size: 1.3rem;
+            color: var(--accent-gold);
+            font-weight: 700;
+            font-family: 'Lora', serif;
+            margin-bottom: 1rem;
+        }
+
+        .remove-item-btn {
+            width: 100%;
+            padding: 0.75rem;
+            background: none;
+            border: 2px solid #e74c3c;
+            color: #e74c3c;
+            border-radius: 6px;
+            cursor: pointer;
+            font-family: 'Merriweather', serif;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .remove-item-btn:hover {
+            background: #e74c3c;
+            color: var(--white);
+        }
+
+        .cart-summary {
+            padding: 2rem;
+            border-top: 3px solid var(--accent-gold);
+            background: var(--bg-beige);
+        }
+
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .summary-row.total {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-maroon);
+            padding-top: 1rem;
+            border-top: 2px solid var(--accent-gold);
+        }
+
+        .checkout-btn {
+            width: 100%;
+            padding: 1.25rem;
+            background: var(--primary-maroon);
+            color: var(--white);
+            border: none;
+            border-radius: 6px;
+            font-size: 1.2rem;
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 1.5rem;
+            transition: all 0.3s;
+        }
+
+        .checkout-btn:hover {
+            background: #4a1818;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .empty-cart {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: var(--text-light);
+        }
+
+        .empty-cart-icon {
+            font-size: 5rem;
+            margin-bottom: 1rem;
+            opacity: 0.3;
+        }
+
+        @media (max-width: 1024px) {
+            .cart-items-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2.5rem;
@@ -517,6 +810,14 @@
             .chatbot-window {
                 width: calc(100% - 2rem);
                 right: 1rem;
+            }
+
+            .cart-items-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cart-filters {
+                flex-wrap: wrap;
             }
         }
 
@@ -562,7 +863,7 @@
         }
 
         .modal-header {
-            background: linear-gradient(135deg, rgba(13, 91, 65, 0.95), rgba(201, 176, 104, 0.9));
+            background: var(--primary-maroon);
             color: var(--white);
             padding: 2rem;
             border-radius: 8px 8px 0 0;
@@ -700,20 +1001,21 @@
         }
 
         .progress-dot.active {
-            background: var(--primary-color);
+            background: var(--primary-maroon);
         }
     </style>
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">Behensp<span>.</span></div>
+            <div class="logo">Aarambh<span>.</span></div>
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#ritual-kits" class="nav-link">Ritual Kits</a></li>
-                <li><a href="#rental" class="nav-link">Rental</a></li>
-                <li><a href="#calculator" class="nav-link">Calculator</a></li>
-                <li><a href="#checklist" class="nav-link">Checklist</a></li>
+                <li><a href="#shaadi-boxes" class="nav-link">Shaadi Boxes</a></li>
+                <li><a href="#rental" class="nav-link">Vendors & Services</a></li>
+                <li><a href="#calculator" class="nav-link">Weddings</a></li>
+                <li><a href="#checklist" class="nav-link">Blogs</a></li>
+                <li><button class="cart-button" onclick="toggleCart()">🛒<span class="cart-badge" id="cartBadge">0</span></button></li>
                 <li><button class="btn btn-primary" onclick="showLoginModal()">Login</button></li>
             </ul>
         </div>
@@ -840,13 +1142,47 @@
         </div>
     </div>
 
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2>My Cart</h2>
+                <button class="close-cart" onclick="toggleCart()">&times;</button>
+            </div>
+            <div class="cart-filters">
+                <button class="filter-btn active" onclick="filterCart('all')">All</button>
+                <button class="filter-btn" onclick="filterCart('Pre-Wedding')">Pre-wedding</button>
+                <button class="filter-btn" onclick="filterCart('Wedding')">Wedding</button>
+                <button class="filter-btn" onclick="filterCart('Post-Wedding')">Post-wedding</button>
+            </div>
+            <div id="cartItemsContainer">
+                <!-- Cart items will be dynamically inserted here -->
+            </div>
+            <div class="cart-summary">
+                <div class="summary-row">
+                    <span>Subtotal:</span>
+                    <span id="cartSubtotal">₹0</span>
+                </div>
+                <div class="summary-row">
+                    <span>Taxes (estimated):</span>
+                    <span id="cartTaxes">₹0</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Grand Total:</span>
+                    <span id="cartTotal">₹0</span>
+                </div>
+                <button class="checkout-btn" onclick="proceedToCheckout()">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
     <section class="hero" id="home">
         <div class="hero-content">
             <h1>Wedding Rituals and Tradition, Simplified</h1>
             <p>Your guide to a beautiful, stress-free wedding begins here. For modern Indian families, we provide culturally-authentic, fully customizable ritual kits and logistical solutions.</p>
             <div class="hero-buttons">
                 <button class="btn btn-primary" onclick="showOnboardingFlow()">Start Planning</button>
-                <button class="btn btn-outline" onclick="scrollToSection('ritual-kits')">Explore Our Collections</button>
+                <button class="btn btn-outline" onclick="scrollToSection('shaadi-boxes')">Explore Our Collections</button>
             </div>
         </div>
     </section>
@@ -891,13 +1227,13 @@
             </div>
         </section>
 
-        <section class="section" id="ritual-kits">
+        <section class="section" id="shaadi-boxes">
             <div class="section-header">
-                <h2>Traditional Ritual Kits</h2>
+                <h2>Shaadi Boxes</h2>
                 <p>Curated collections for every ceremony</p>
             </div>
             <div id="ritual-kits-grid" class="products-grid">
-                <div class="loading">Loading ritual kits...</div>
+                <div class="loading">Loading Shaadi Boxes...</div>
             </div>
         </section>
 
@@ -989,14 +1325,14 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
-                <h3>About Behensp</h3>
-                <p>Your trusted partner for premium Indian wedding planning. We bring tradition and modern convenience together.</p>
+                <h3>About Aarambh</h3>
+                <p>Your trusted partner for luxury Indian wedding planning. We bring tradition and modern convenience together.</p>
             </div>
             <div class="footer-section">
                 <h3>Quick Links</h3>
                 <ul class="footer-links">
-                    <li><a href="#ritual-kits">Ritual Kits</a></li>
-                    <li><a href="#rental">Rental Services</a></li>
+                    <li><a href="#shaadi-boxes">Shaadi Boxes</a></li>
+                    <li><a href="#rental">Vendors & Services</a></li>
                     <li><a href="#calculator">Budget Calculator</a></li>
                     <li><a href="#checklist">Wedding Planner</a></li>
                 </ul>
@@ -1013,14 +1349,14 @@
             <div class="footer-section">
                 <h3>Contact</h3>
                 <ul class="footer-links">
-                    <li>📧 info@behensp.com</li>
+                    <li>📧 info@aarambh.com</li>
                     <li>📞 +91 98765 43210</li>
                     <li>📍 Mumbai, India</li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 Behensp. All rights reserved. | Privacy Policy | Terms of Service</p>
+            <p>&copy; 2024 Aarambh. All rights reserved. | Privacy Policy | Terms of Service</p>
         </div>
     </footer>
 
@@ -1328,6 +1664,217 @@
 
         function showLoginModal() {
             alert('Login functionality coming soon! This would integrate with the authentication system.');
+        }
+
+        // Cart functionality
+        let cart = [];
+        let currentFilter = 'all';
+
+        function toggleCart() {
+            const cartModal = document.getElementById('cartModal');
+            cartModal.classList.toggle('active');
+            if (cartModal.classList.contains('active')) {
+                renderCart();
+            }
+        }
+
+        function addToCart(item, category) {
+            const existingItem = cart.find(cartItem => cartItem.id === item.id);
+            if (existingItem) {
+                existingItem.quantity++;
+            } else {
+                cart.push({
+                    id: item.id,
+                    name: item.name,
+                    category: category,
+                    price: item.basePrice || item.dailyRentalPrice,
+                    quantity: 1,
+                    image: item.images ? item.images[0] : ''
+                });
+            }
+            updateCartBadge();
+            alert(`${item.name} added to cart!`);
+        }
+
+        function removeFromCart(itemId) {
+            cart = cart.filter(item => item.id !== itemId);
+            updateCartBadge();
+            renderCart();
+        }
+
+        function updateQuantity(itemId, change) {
+            const item = cart.find(cartItem => cartItem.id === itemId);
+            if (item) {
+                item.quantity += change;
+                if (item.quantity <= 0) {
+                    removeFromCart(itemId);
+                } else {
+                    renderCart();
+                }
+            }
+        }
+
+        function updateCartBadge() {
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            document.getElementById('cartBadge').textContent = totalItems;
+        }
+
+        function filterCart(category) {
+            currentFilter = category;
+            
+            // Update active button
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            renderCart();
+        }
+
+        function renderCart() {
+            const container = document.getElementById('cartItemsContainer');
+            
+            let filteredCart = cart;
+            if (currentFilter !== 'all') {
+                filteredCart = cart.filter(item => item.category === currentFilter);
+            }
+            
+            if (filteredCart.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-cart">
+                        <div class="empty-cart-icon">🛒</div>
+                        <h3>Your cart is empty</h3>
+                        <p>Add some Shaadi Boxes or rental items to get started!</p>
+                    </div>
+                `;
+            } else {
+                container.innerHTML = `
+                    <div class="cart-items-grid">
+                        ${filteredCart.map(item => `
+                            <div class="cart-item">
+                                <div class="cart-item-image">
+                                    📦
+                                </div>
+                                <h4 class="cart-item-name">${item.name}</h4>
+                                <p class="cart-item-category">${item.category}</p>
+                                <div class="quantity-controls">
+                                    <button class="quantity-btn decrease-btn" data-id="${item.id}">-</button>
+                                    <input type="number" class="quantity-input" value="${item.quantity}" readonly>
+                                    <button class="quantity-btn increase-btn" data-id="${item.id}">+</button>
+                                </div>
+                                <div class="cart-item-price">₹${(item.price * item.quantity).toLocaleString()}</div>
+                                <button class="remove-item-btn" data-id="${item.id}">Remove</button>
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+            }
+
+            // Attach event listeners to quantity buttons and remove buttons
+            container.querySelectorAll('.decrease-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const id = btn.getAttribute('data-id');
+                    updateQuantity(id, -1);
+                });
+            });
+            container.querySelectorAll('.increase-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const id = btn.getAttribute('data-id');
+                    updateQuantity(id, 1);
+                });
+            });
+            container.querySelectorAll('.remove-item-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const id = btn.getAttribute('data-id');
+                    removeFromCart(id);
+                });
+            });
+            updateCartSummary();
+        }
+
+        function updateCartSummary() {
+            const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            const taxes = Math.round(subtotal * 0.18); // 18% GST
+            const total = subtotal + taxes;
+            
+            document.getElementById('cartSubtotal').textContent = `₹${subtotal.toLocaleString()}`;
+            document.getElementById('cartTaxes').textContent = `₹${taxes.toLocaleString()}`;
+            document.getElementById('cartTotal').textContent = `₹${total.toLocaleString()}`;
+        }
+
+        function proceedToCheckout() {
+            if (cart.length === 0) {
+                alert('Your cart is empty! Please add items before checkout.');
+                return;
+            }
+            alert(`Proceeding to checkout with ${cart.length} items. Total: ${document.getElementById('cartTotal').textContent}`);
+        }
+
+        // Store items globally for cart access
+        let allRitualKits = [];
+        let allRentalItems = [];
+
+        // Update the existing loadRitualKits function to add "Add to Cart" buttons
+        async function loadRitualKits() {
+            try {
+                const response = await fetch('/api/ritual-kits');
+                const kits = await response.json();
+                allRitualKits = kits;
+                const grid = document.getElementById('ritual-kits-grid');
+                
+                grid.innerHTML = kits.map((kit, index) => `
+                    <div class="product-card">
+                        <div class="product-icon">
+                            ${kit.isPopular ? '<span class="product-badge">Popular</span>' : ''}
+                            📦
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">${kit.name}</h3>
+                            <p class="product-description">${kit.description}</p>
+                            <div class="product-price">₹${kit.basePrice.toLocaleString()}</div>
+                            <button class="btn btn-primary" style="margin-top: 1rem; width: 100%;" onclick="addItemToCart('kit', ${index})">Add to Cart</button>
+                        </div>
+                    </div>
+                `).join('');
+            } catch (error) {
+                console.error('Error loading ritual kits:', error);
+            }
+        }
+
+        // Update the existing loadRentalItems function to add "Add to Cart" buttons
+        async function loadRentalItems() {
+            try {
+                const response = await fetch('/api/rental');
+                const items = await response.json();
+                allRentalItems = items;
+                const grid = document.getElementById('rental-grid');
+                
+                grid.innerHTML = items.map((item, index) => `
+                    <div class="product-card">
+                        <div class="product-icon">
+                            ${item.availability ? '' : '<span class="product-badge">Out of Stock</span>'}
+                            👗
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">${item.name}</h3>
+                            <p class="product-description">${item.description}</p>
+                            <div class="product-price">₹${item.dailyRentalPrice.toLocaleString()}/day</div>
+                            <button class="btn btn-primary" style="margin-top: 1rem; width: 100%;" onclick="addItemToCart('rental', ${index})">Add to Cart</button>
+                        </div>
+                    </div>
+                `).join('');
+            } catch (error) {
+                console.error('Error loading rental items:', error);
+            }
+        }
+
+        function addItemToCart(type, index) {
+            if (type === 'kit') {
+                const kit = allRitualKits[index];
+                addToCart(kit, kit.category);
+            } else {
+                const item = allRentalItems[index];
+                addToCart(item, item.category);
+            }
         }
     </script>
 </body>

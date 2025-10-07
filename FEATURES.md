@@ -1,9 +1,9 @@
-# Behensp Platform - Features Documentation
+# Aarambh Platform - Features Documentation
 
 ## 🎯 Overview
 **"Wedding Rituals and Tradition, Simplified"**
 
-A premium, luxury e-commerce platform for Indian wedding logistics. We deliver culturally-authentic, fully customizable ritual kits and logistical solutions with the elegance and peace of mind that modern Indian families deserve.
+A premium, luxury e-commerce platform for Indian wedding logistics. We deliver culturally-authentic, fully customizable Shaadi Boxes and logistical solutions with the elegance and peace of mind that modern Indian families deserve.
 
 ## ✨ Core Features Implemented
 
@@ -44,13 +44,14 @@ A premium, luxury e-commerce platform for Indian wedding logistics. We deliver c
 - Data stored in localStorage for persistence
 - Seamless transition to ritual kits catalog
 
-### 1. Customizable Ritual Kits 🎁
-**5 Traditional Ceremony Kits:**
+### 1. Customizable Shaadi Boxes 🎁
+**6 Traditional Ceremony Kits:**
 - **Haldi Ceremony Kit** (₹5,000) - Turmeric paste, flowers, brass plates, ceremonial items
 - **Mehendi Ceremony Kit** (₹4,500) - Henna cones, decorative trays, cushions, lights
 - **Saptapadi Wedding Kit** (₹8,000) - Sacred fire pit, ghee, samagri, ceremonial cloth
 - **Bengali Wedding Ritual Kit** (₹12,000) - Regional specialties including paan, sindoor, conch shell
 - **Sangeet Ceremony Kit** (₹7,500) - Props, backdrop, LED lights, musical instruments
+- **Vidaai Ceremony Kit** (₹3,500) - Rice grains, decorative kalash, flower petals, traditional umbrella
 
 **Features:**
 - Full customization options for each kit
@@ -152,7 +153,7 @@ A premium, luxury e-commerce platform for Indian wedding logistics. We deliver c
 - Greeting: "Namaste! 🙏 I'm Saathi, your dedicated wedding concierge."
 
 **Knowledge Domains:**
-- Ritual kits information and cultural significance
+- Shaadi Boxes information and cultural significance
 - Rental service queries (jewelry, attire, decor)
 - Planning and timeline advice (8-12 months ideal)
 - Budget and cost calculations
@@ -270,7 +271,7 @@ A premium, luxury e-commerce platform for Indian wedding logistics. We deliver c
 
 ### API Endpoints
 - `/api/health` - Health check
-- `/api/ritual-kits` - Ritual kits catalog
+- `/api/ritual-kits` - Shaadi Boxes catalog
 - `/api/rental` - Rental items
 - `/api/checklist` - Wedding planner
 - `/api/calculator` - Budget calculator
@@ -386,7 +387,7 @@ Copy `.env.example` to `.env` and configure:
 ## 🎓 Use Cases
 
 ### Case 1: Engaged Couple
-1. Browse ritual kits for Haldi ceremony
+1. Browse Shaadi Boxes for Haldi ceremony
 2. Customize with premium options
 3. Add to cart (₹7,000 total)
 4. Use calculator for full wedding budget
@@ -405,11 +406,11 @@ Copy `.env.example` to `.env` and configure:
 
 ## 📞 Support
 
-- **Email:** info@behensp.com
+- **Email:** info@aarambh.com
 - **Phone:** +91 98765 43210
 - **Location:** Mumbai, India
 - **Hours:** 24/7 AI support, 9 AM - 9 PM human support
 
 ---
 
-**Behensp** - Making Indian Weddings Beautiful and Memorable! 🎊
+**Aarambh** - Making Indian Weddings Beautiful and Memorable! 🎊
