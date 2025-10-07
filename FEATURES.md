@@ -1,9 +1,48 @@
 # Behensp Platform - Features Documentation
 
 ## 🎯 Overview
-A comprehensive premium e-commerce platform for Indian wedding logistics, serving both B2C (couples) and B2B (wedding planners) markets.
+**"Wedding Rituals and Tradition, Simplified"**
+
+A premium, luxury e-commerce platform for Indian wedding logistics. We deliver culturally-authentic, fully customizable ritual kits and logistical solutions with the elegance and peace of mind that modern Indian families deserve.
 
 ## ✨ Core Features Implemented
+
+### 0. Guided Onboarding Experience 🎯
+**3-Step Personalization Flow:**
+
+**Step 1: Cultural Traditions**
+- Select from multiple Indian wedding traditions:
+  - Punjabi 🪔
+  - Tamil 🌺
+  - Bengali 🪷
+  - Maharashtrian 🕉️
+  - Gujarati 🎊
+  - South Indian 🪈
+- Multi-select enabled for mixed-culture weddings
+- Beautiful icon-based selection interface
+
+**Step 2: Wedding Date**
+- Set estimated wedding date
+- Helps with timeline planning and availability
+- Integration with logistics and rental services
+
+**Step 3: Event Selection**
+- Choose which ceremonies to plan:
+  - Roka/Engagement - The formal announcement
+  - Mehendi - The henna ceremony
+  - Haldi - The turmeric ceremony
+  - Sangeet - The musical night
+  - Wedding Ceremony - The main ceremony (pre-selected)
+  - Reception - The celebration dinner
+- Each event includes brief cultural explanation
+- Selections drive personalized recommendations
+
+**User Experience:**
+- Clean, elegant modal interface
+- Progress indicators showing current step
+- Previous/Next navigation
+- Data stored in localStorage for persistence
+- Seamless transition to ritual kits catalog
 
 ### 1. Customizable Ritual Kits 🎁
 **5 Traditional Ceremony Kits:**
@@ -103,32 +142,44 @@ A comprehensive premium e-commerce platform for Indian wedding logistics, servin
 - Budget guidelines and tips
 - EMI calculator for financing
 
-### 5. AI Concierge Chatbot 🤖
-**Intelligent Wedding Assistant:**
+### 5. Saathi - AI Wedding Concierge 🤖
+**"Your Dedicated Wedding Companion"**
+
+**Persona:**
+- Name: **Saathi** (meaning "companion" in Hindi)
+- Tone: Reassuring, respectful, and elegant
+- Communication: Warm, culturally-aware, and helpful
+- Greeting: "Namaste! 🙏 I'm Saathi, your dedicated wedding concierge."
 
 **Knowledge Domains:**
-- Ritual kits information
-- Rental service queries
-- Planning and timeline advice
+- Ritual kits information and cultural significance
+- Rental service queries (jewelry, attire, decor)
+- Planning and timeline advice (8-12 months ideal)
 - Budget and cost calculations
-- Payment methods
-- B2B services information
+- Payment methods (UPI, cards, EMI options)
+- B2B services information and benefits
+
+**Agentic Capabilities:**
+- **Context-Aware Suggestions**: Proactive recommendations based on user selections
+- **Cultural Guidance**: Explain significance of rituals (e.g., "What is the significance of the seven pheras?")
+- **Action-Oriented**: Can help with tasks like finalizing kits or adding items
+- **Timeline Reminders**: Wedding date-based notifications (future capability)
 
 **Sample Conversations:**
 - "Tell me about Haldi ceremony kits"
 - "What rental jewelry options do you have?"
 - "How do I create a wedding checklist?"
 - "What payment methods do you accept?"
-- "What are B2B benefits?"
+- "What are B2B benefits for wedding planners?"
 
 **Features:**
-- Intent recognition
+- Advanced intent recognition
 - Context-aware responses
 - 24/7 availability
-- Greeting variations (Namaste!)
-- Feedback collection
-- Suggested questions
-- Multi-topic support
+- Elegant emerald green branding
+- Feedback collection for continuous improvement
+- Suggested questions for easy navigation
+- Multi-topic support with seamless transitions
 
 ### 6. Secure Payment Gateway 🔒
 **Razorpay Integration:**
@@ -171,15 +222,20 @@ A comprehensive premium e-commerce platform for Indian wedding logistics, servin
 
 ## 🎨 Design & User Experience
 
-### Color Scheme
-- **Primary Gold:** #d4af37 (Auspicious Indian wedding color)
-- **Secondary Maroon:** #8b0000 (Traditional elegance)
-- **Accent Red:** #ff6b6b (Celebration vibes)
-- **Light Background:** #fef9f3 (Warm, inviting)
+### Brand Philosophy
+**"Wedding Rituals and Tradition, Simplified"** - A premium, luxury digital boutique experience
 
-### Typography
-- **Headers:** Playfair Display (Elegant serif)
-- **Body:** Poppins (Modern, readable sans-serif)
+### Color Scheme
+- **Primary Emerald:** #0D5B41 (Deep, luxurious accent for CTAs and branding)
+- **Metallic Gold:** #C9B068 (Luxury highlights, icons, decorative borders)
+- **Warm Ivory:** #FDF8F0 (Generous background white space)
+- **Charcoal Grey:** #333333 (Soft, easy-to-read primary text)
+- **Pure White:** #FFFFFF (Card backgrounds for contrast)
+
+### Typography (Exclusively Serif)
+- **Headers:** Playfair Display (Classic, elegant display serif)
+- **Body Text:** Merriweather (Highly readable serif for excellent legibility)
+- **Accent:** Lora (For special UI elements and emphasis)
 
 ### Responsive Design
 - Mobile-first approach
