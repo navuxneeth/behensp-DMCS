@@ -1790,14 +1790,19 @@
             alert(`Proceeding to checkout with ${cart.length} items. Total: ${document.getElementById('cartTotal').textContent}`);
         }
 
+        // Store items globally for cart access
+        let allRitualKits = [];
+        let allRentalItems = [];
+
         // Update the existing loadRitualKits function to add "Add to Cart" buttons
         async function loadRitualKits() {
             try {
                 const response = await fetch('/api/ritual-kits');
                 const kits = await response.json();
+                allRitualKits = kits;
                 const grid = document.getElementById('ritual-kits-grid');
                 
-                grid.innerHTML = kits.map(kit => `
+                grid.innerHTML = kits.map((kit, index) => `
                     <div class="product-card">
                         <div class="product-icon">
                             ${kit.isPopular ? '<span class="product-badge">Popular</span>' : ''}
@@ -1807,7 +1812,7 @@
                             <h3 class="product-title">${kit.name}</h3>
                             <p class="product-description">${kit.description}</p>
                             <div class="product-price">₹${kit.basePrice.toLocaleString()}</div>
-                            <button class="btn btn-primary" style="margin-top: 1rem; width: 100%;" onclick='addToCart(${JSON.stringify(kit)}, "${kit.category}")'>Add to Cart</button>
+                            <button class="btn btn-primary" style="margin-top: 1rem; width: 100%;" onclick="addItemToCart('kit', ${index})">Add to Cart</button>
                         </div>
                     </div>
                 `).join('');
@@ -1821,9 +1826,10 @@
             try {
                 const response = await fetch('/api/rental');
                 const items = await response.json();
+                allRentalItems = items;
                 const grid = document.getElementById('rental-grid');
                 
-                grid.innerHTML = items.map(item => `
+                grid.innerHTML = items.map((item, index) => `
                     <div class="product-card">
                         <div class="product-icon">
                             ${item.availability ? '' : '<span class="product-badge">Out of Stock</span>'}
@@ -1833,12 +1839,22 @@
                             <h3 class="product-title">${item.name}</h3>
                             <p class="product-description">${item.description}</p>
                             <div class="product-price">₹${item.dailyRentalPrice.toLocaleString()}/day</div>
-                            <button class="btn btn-primary" style="margin-top: 1rem; width: 100%;" onclick='addToCart(${JSON.stringify(item)}, "${item.category}")'>Add to Cart</button>
+                            <button class="btn btn-primary" style="margin-top: 1rem; width: 100%;" onclick="addItemToCart('rental', ${index})">Add to Cart</button>
                         </div>
                     </div>
                 `).join('');
             } catch (error) {
                 console.error('Error loading rental items:', error);
+            }
+        }
+
+        function addItemToCart(type, index) {
+            if (type === 'kit') {
+                const kit = allRitualKits[index];
+                addToCart(kit, kit.category);
+            } else {
+                const item = allRentalItems[index];
+                addToCart(item, item.category);
             }
         }
     </script>
