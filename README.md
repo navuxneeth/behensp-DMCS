@@ -1,4 +1,4 @@
-# Behensp - Premium Indian Wedding Logistics Platform
+# Aarambh - Luxury Indian Wedding Solutions
 
 **"Wedding Rituals and Tradition, Simplified"**
 
@@ -16,7 +16,7 @@ For modern Indian families, we are the premium e-commerce platform that provides
 - **Personalized Journey**: Tailored recommendations based on your cultural preferences
 
 ### Premium Product Catalog
-- **Customizable Ritual Kits**: Traditional ceremony kits with region-specific options
+- **Shaadi Boxes**: Traditional ceremony kits with region-specific options
 - **Premium Rental Service**: Designer attire, jewelry, and decor items
 - **Multi-Checklist Planner**: Comprehensive wedding task management
 - **Live Cost Calculator**: Real-time budget estimation in INR
@@ -109,7 +109,7 @@ behensp-DMCS/
 ├── server/
 │   ├── index.js              # Main server file
 │   ├── routes/               # API routes
-│   │   ├── ritualKits.js     # Ritual kits catalog
+│   │   ├── ritualKits.js     # Shaadi Boxes catalog
 │   │   ├── rental.js         # Rental service
 │   │   ├── checklist.js      # Wedding planner
 │   │   ├── calculator.js     # Budget calculator
@@ -126,6 +126,8 @@ behensp-DMCS/
 │   └── config/               # Configuration files
 ├── public/
 │   └── index.html            # Frontend application
+├── assets/
+│   └── images/               # Image assets
 ├── package.json
 ├── .env.example
 └── README.md
@@ -133,9 +135,10 @@ behensp-DMCS/
 
 ## 🎨 Features in Detail
 
-### 1. Ritual Kits Catalog
+### 1. Shaadi Boxes Catalog
 - Pre-Wedding ceremonies (Haldi, Mehendi, Sangeet)
 - Wedding ceremonies (Saptapadi, Kanyadaan)
+- Post-Wedding ceremonies (Vidaai)
 - Regional variations (Bengali, South Indian, Gujarati, Punjabi)
 - Full customization options
 - Real-time pricing
@@ -178,10 +181,10 @@ behensp-DMCS/
 
 ## 🔧 API Endpoints
 
-### Ritual Kits
+### Shaadi Boxes
 ```
-GET    /api/ritual-kits          # Get all ritual kits
-GET    /api/ritual-kits/:id      # Get specific kit
+GET    /api/ritual-kits          # Get all Shaadi Boxes
+GET    /api/ritual-kits/:id      # Get specific box
 POST   /api/ritual-kits/calculate-price  # Calculate customized price
 ```
 
@@ -291,7 +294,7 @@ This project is licensed under the ISC License.
 
 ## 📧 Support
 
-For support, email info@behensp.com or call +91 98765 43210
+For support, email info@aarambh.com or call +91 98765 43210
 
 ## 🙏 Acknowledgments
 
@@ -301,4 +304,4 @@ For support, email info@behensp.com or call +91 98765 43210
 
 ---
 
-**Behensp** - Making Indian Weddings Beautiful and Memorable! 🎊
+**Aarambh** - Making Indian Weddings Beautiful and Memorable! 🎊

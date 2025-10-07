@@ -108,6 +108,27 @@ const sampleRitualKits = [
     isPopular: true,
     rating: 4.6,
     reviewCount: 178
+  },
+  {
+    id: '6',
+    name: 'Vidaai Ceremony Kit',
+    category: 'Post-Wedding',
+    description: 'Traditional farewell ceremony essentials for the bride\'s departure',
+    items: [
+      { name: 'Rice Grains', quantity: 2, isCustomizable: true },
+      { name: 'Decorative Kalash', quantity: 1, isCustomizable: false },
+      { name: 'Flower Petals', quantity: 5, isCustomizable: true },
+      { name: 'Sacred Thread', quantity: 1, isCustomizable: false },
+      { name: 'Traditional Umbrella', quantity: 1, isCustomizable: true }
+    ],
+    basePrice: 3500,
+    images: ['/images/post-wedding-kit.jpg'],
+    customizationOptions: [
+      { name: 'Kalash Design', choices: ['Brass', 'Silver Plated'], additionalCost: 1000 },
+      { name: 'Umbrella Type', choices: ['Standard', 'Decorative'], additionalCost: 1500 }
+    ],
+    rating: 4.7,
+    reviewCount: 95
   }
 ];
 
