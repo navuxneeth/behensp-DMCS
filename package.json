@@ -1,0 +1,35 @@
+{
+  "name": "behensp-dmcs",
+  "version": "1.0.0",
+  "description": "Premium Indian Wedding Logistics E-commerce Platform",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js",
+    "test": "echo \"No tests specified yet\" && exit 0"
+  },
+  "keywords": [
+    "wedding",
+    "e-commerce",
+    "indian-wedding",
+    "logistics",
+    "rental",
+    "planning"
+  ],
+  "author": "Behensp Team",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "mongoose": "^8.0.0",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
