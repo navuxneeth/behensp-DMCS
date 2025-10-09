@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tithi - Your Wedding Planning Companion</title>
+    <title>Aarambh - Luxury Indian Wedding Solutions</title>
     <meta name="description" content="Your one-stop solution for Indian wedding planning - Shaadi Boxes, rental services, and expert guidance">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lora:wght@400;500;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -16,25 +16,27 @@
         }
 
         :root {
-            --primary-red: #761A1A;
-            --bg-cream: #FFFBF4;
-            --text-dark: #333333;
+            --primary-maroon: #5C2121;
+            --bg-beige: #EAE0D1;
+            --accent-gold: #D4A037;
+            --dark-green: #2A402E;
+            --dark-blue: #1F2A40;
+            --text-dark: #1F2A40;
             --text-light: #666666;
-            --border-gray: #D9D9D9;
             --white: #ffffff;
             --shadow: 0 2px 8px rgba(0,0,0,0.08);
             --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
         }
 
         body {
-            font-family: 'Gothic A1', 'Century Gothic', 'AppleGothic', sans-serif;
-            line-height: 1.6;
+            font-family: 'Merriweather', serif;
+            line-height: 1.8;
             color: var(--text-dark);
-            background-color: var(--bg-cream);
+            background-color: var(--bg-beige);
         }
 
         h1, h2, h3, h4, h5, h6 {
-            font-family: 'Gothic A1', 'Century Gothic', 'AppleGothic', sans-serif;
+            font-family: 'Playfair Display', serif;
             font-weight: 600;
             letter-spacing: 0.5px;
         }
@@ -58,13 +60,14 @@
         }
 
         .logo {
-            display: flex;
-            align-items: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-maroon);
         }
 
-        .logo img {
-            height: 40px;
-            width: auto;
+        .logo span {
+            color: var(--accent-gold);
         }
 
         .nav-menu {
@@ -83,16 +86,16 @@
         }
 
         .nav-link:hover {
-            color: var(--primary-red);
+            color: var(--primary-maroon);
         }
 
         .btn {
             padding: 0.9rem 2.5rem;
             border: none;
-            border-radius: 8px;
+            border-radius: 4px;
             cursor: pointer;
             font-weight: 500;
-            font-family: 'Gothic A1', 'Century Gothic', sans-serif;
+            font-family: 'Merriweather', serif;
             transition: all 0.3s;
             text-decoration: none;
             display: inline-block;
@@ -100,12 +103,12 @@
         }
 
         .btn-primary {
-            background: var(--primary-red);
+            background: var(--primary-maroon);
             color: var(--white);
         }
 
         .btn-primary:hover {
-            background: #5a1414;
+            background: #4a1818;
             transform: translateY(-2px);
             box-shadow: var(--shadow-lg);
         }
@@ -122,9 +125,9 @@
         }
 
         .hero {
-            background: var(--primary-red);
+            background: var(--primary-maroon);
             color: var(--white);
-            padding: 6rem 2rem 4rem;
+            padding: 8rem 2rem;
             text-align: center;
         }
 
@@ -157,33 +160,6 @@
             flex-wrap: wrap;
         }
 
-        .countdown-container {
-            max-width: 600px;
-            margin: 3rem auto 0;
-            padding: 2rem;
-            background: rgba(255, 251, 244, 0.15);
-            border-radius: 12px;
-            border: 2px solid rgba(255, 251, 244, 0.3);
-        }
-
-        .countdown-timer {
-            text-align: center;
-            color: var(--white);
-        }
-
-        .countdown-timer h3 {
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-            font-weight: 400;
-            opacity: 0.9;
-        }
-
-        .countdown-display {
-            font-size: 2.5rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-        }
-
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -201,7 +177,7 @@
 
         .section-header h2 {
             font-size: 2.8rem;
-            color: var(--primary-red);
+            color: var(--primary-maroon);
             margin-bottom: 1rem;
             letter-spacing: 0.5px;
         }
@@ -223,11 +199,11 @@
         .feature-card {
             background: var(--white);
             padding: 3rem 2.5rem;
-            border-radius: 12px;
+            border-radius: 8px;
             box-shadow: var(--shadow);
             transition: transform 0.3s, box-shadow 0.3s;
             text-align: center;
-            border: 1px solid var(--border-gray);
+            border-top: 3px solid var(--accent-gold);
         }
 
         .feature-card:hover {
@@ -236,25 +212,12 @@
         }
 
         .feature-icon {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 1.5rem;
-            background: var(--bg-cream);
-            border: 2px solid var(--border-gray);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .feature-icon img {
-            width: 48px;
-            height: 48px;
-            object-fit: contain;
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
         }
 
         .feature-card h3 {
-            color: var(--primary-red);
+            color: var(--primary-maroon);
             margin-bottom: 1rem;
             font-size: 1.4rem;
         }
@@ -493,7 +456,7 @@
         }
 
         .footer {
-            background: var(--primary-red);
+            background: var(--dark-blue);
             color: var(--white);
             padding: 3rem 2rem 1rem;
             margin-top: 4rem;
@@ -510,7 +473,7 @@
 
         .footer-section h3 {
             margin-bottom: 1rem;
-            color: var(--bg-cream);
+            color: var(--accent-gold);
         }
 
         .footer-links {
@@ -552,14 +515,14 @@
         }
 
         .cart-button:hover {
-            color: var(--primary-red);
+            color: var(--primary-maroon);
         }
 
         .cart-badge {
             position: absolute;
-            top: 5px;
-            right: 5px;
-            background: var(--primary-red);
+            top: -5px;
+            right: -5px;
+            background: var(--primary-maroon);
             color: var(--white);
             border-radius: 50%;
             width: 20px;
@@ -568,7 +531,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-family: 'Gothic A1', 'Century Gothic', sans-serif;
+            font-family: 'Lora', serif;
         }
 
         .cart-modal {
@@ -900,11 +863,10 @@
         }
 
         .modal-header {
-            background: var(--primary-red);
+            background: var(--primary-maroon);
             color: var(--white);
             padding: 2rem;
             border-radius: 8px 8px 0 0;
-            position: relative;
         }
 
         .modal-header h2 {
@@ -1014,9 +976,9 @@
             color: var(--text-dark);
             padding: 0.9rem 2rem;
             border: none;
-            border-radius: 8px;
+            border-radius: 4px;
             cursor: pointer;
-            font-family: 'Gothic A1', 'Century Gothic', sans-serif;
+            font-family: 'Merriweather', serif;
             transition: all 0.3s;
         }
 
@@ -1039,182 +1001,22 @@
         }
 
         .progress-dot.active {
-            background: var(--primary-red);
-        }
-
-        /* Account Page Styles */
-        .account-page {
-            max-width: 1000px;
-            margin: 2rem auto;
-            padding: 2rem;
-        }
-
-        .account-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .account-header h1 {
-            color: var(--primary-red);
-            margin-bottom: 0.5rem;
-        }
-
-        .account-sections {
-            display: grid;
-            gap: 2rem;
-        }
-
-        .account-section {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 12px;
-            border: 1px solid var(--border-gray);
-            box-shadow: var(--shadow);
-        }
-
-        .account-section h2 {
-            color: var(--primary-red);
-            margin-bottom: 1.5rem;
-            font-size: 1.5rem;
-            padding-bottom: 0.75rem;
-            border-bottom: 2px solid var(--border-gray);
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: var(--text-dark);
-            font-weight: 500;
-        }
-
-        .form-control {
-            width: 100%;
-            padding: 0.75rem 1rem;
-            border: 1px solid var(--border-gray);
-            border-radius: 8px;
-            font-family: 'Gothic A1', 'Century Gothic', sans-serif;
-            font-size: 1rem;
-            transition: border-color 0.3s;
-        }
-
-        .form-control:focus {
-            outline: none;
-            border-color: var(--primary-red);
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-        }
-
-        .radio-group {
-            display: flex;
-            gap: 2rem;
-            margin-top: 0.5rem;
-        }
-
-        .radio-option {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .radio-option input[type="radio"] {
-            width: 20px;
-            height: 20px;
-            accent-color: var(--primary-red);
-        }
-
-        .btn-save {
-            background: var(--primary-red);
-            color: var(--white);
-            padding: 0.9rem 2.5rem;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: 500;
-            font-family: 'Gothic A1', 'Century Gothic', sans-serif;
-            font-size: 1rem;
-            transition: all 0.3s;
-        }
-
-        .btn-save:hover {
-            background: #5a1414;
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .bank-account-list {
-            list-style: none;
-            padding: 0;
-            margin-bottom: 1rem;
-        }
-
-        .bank-account-item {
-            padding: 1rem;
-            background: var(--bg-cream);
-            border-radius: 8px;
-            margin-bottom: 0.5rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .btn-link {
-            background: none;
-            border: none;
-            color: var(--primary-red);
-            cursor: pointer;
-            text-decoration: underline;
-            font-family: 'Gothic A1', 'Century Gothic', sans-serif;
-        }
-
-        .support-options {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .support-card {
-            padding: 1.5rem;
-            background: var(--bg-cream);
-            border-radius: 12px;
-            text-align: center;
-            border: 1px solid var(--border-gray);
-        }
-
-        .support-card h4 {
-            color: var(--primary-red);
-            margin-bottom: 0.5rem;
+            background: var(--primary-maroon);
         }
     </style>
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">
-                <img src="../assets/from-figma/tithi logo.png" alt="Tithi Logo">
-            </div>
+            <div class="logo">Aarambh<span>.</span></div>
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#shaadi-boxes" class="nav-link">Shaadi Boxes</a></li>
                 <li><a href="#rental" class="nav-link">Vendors & Services</a></li>
                 <li><a href="#calculator" class="nav-link">Weddings</a></li>
                 <li><a href="#checklist" class="nav-link">Blogs</a></li>
-                <li><button class="cart-button" onclick="toggleCart()">
-                    <img src="../assets/from-figma/cart icon cta.svg" alt="Cart" style="width: 50px; height: auto;">
-                    <span class="cart-badge" id="cartBadge">0</span>
-                </button></li>
-                <li><button class="btn btn-primary" onclick="showAccountPage()">
-                    <img src="../assets/from-figma/account icon secondary.svg" alt="Account" style="width: 24px; height: auto; vertical-align: middle; margin-right: 0.5rem; filter: brightness(0) invert(1);">
-                    Account
-                </button></li>
+                <li><button class="cart-button" onclick="toggleCart()">🛒<span class="cart-badge" id="cartBadge">0</span></button></li>
+                <li><button class="btn btn-primary" onclick="showLoginModal()">Login</button></li>
             </ul>
         </div>
     </nav>
@@ -1241,32 +1043,32 @@
                         <div class="tradition-options">
                             <div class="tradition-option" onclick="toggleTradition('punjabi')">
                                 <input type="checkbox" id="tradition-punjabi" value="punjabi">
-                                <div style="width: 40px; height: 40px; margin: 0 auto 0.5rem; background: var(--border-gray); border-radius: 8px;"></div>
+                                <div style="font-size: 2rem; margin-bottom: 0.5rem;">🪔</div>
                                 <div>Punjabi</div>
                             </div>
                             <div class="tradition-option" onclick="toggleTradition('tamil')">
                                 <input type="checkbox" id="tradition-tamil" value="tamil">
-                                <div style="width: 40px; height: 40px; margin: 0 auto 0.5rem; background: var(--border-gray); border-radius: 8px;"></div>
+                                <div style="font-size: 2rem; margin-bottom: 0.5rem;">🌺</div>
                                 <div>Tamil</div>
                             </div>
                             <div class="tradition-option" onclick="toggleTradition('bengali')">
                                 <input type="checkbox" id="tradition-bengali" value="bengali">
-                                <div style="width: 40px; height: 40px; margin: 0 auto 0.5rem; background: var(--border-gray); border-radius: 8px;"></div>
+                                <div style="font-size: 2rem; margin-bottom: 0.5rem;">🪷</div>
                                 <div>Bengali</div>
                             </div>
                             <div class="tradition-option" onclick="toggleTradition('maharashtrian')">
                                 <input type="checkbox" id="tradition-maharashtrian" value="maharashtrian">
-                                <div style="width: 40px; height: 40px; margin: 0 auto 0.5rem; background: var(--border-gray); border-radius: 8px;"></div>
+                                <div style="font-size: 2rem; margin-bottom: 0.5rem;">🕉️</div>
                                 <div>Maharashtrian</div>
                             </div>
                             <div class="tradition-option" onclick="toggleTradition('gujarati')">
                                 <input type="checkbox" id="tradition-gujarati" value="gujarati">
-                                <div style="width: 40px; height: 40px; margin: 0 auto 0.5rem; background: var(--border-gray); border-radius: 8px;"></div>
+                                <div style="font-size: 2rem; margin-bottom: 0.5rem;">🎊</div>
                                 <div>Gujarati</div>
                             </div>
                             <div class="tradition-option" onclick="toggleTradition('south-indian')">
                                 <input type="checkbox" id="tradition-south-indian" value="south-indian">
-                                <div style="width: 40px; height: 40px; margin: 0 auto 0.5rem; background: var(--border-gray); border-radius: 8px;"></div>
+                                <div style="font-size: 2rem; margin-bottom: 0.5rem;">🪈</div>
                                 <div>South Indian</div>
                             </div>
                         </div>
@@ -1382,14 +1184,6 @@
                 <button class="btn btn-primary" onclick="showOnboardingFlow()">Start Planning</button>
                 <button class="btn btn-outline" onclick="scrollToSection('shaadi-boxes')">Explore Our Collections</button>
             </div>
-            <div class="countdown-container">
-                <div class="countdown-timer">
-                    <h3>Your Wedding Countdown</h3>
-                    <div class="countdown-display" id="countdownDisplay">
-                        Set your wedding date to start the countdown
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -1401,44 +1195,32 @@
             </div>
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon">
-                        <img src="../assets/from-figma/wedding template image 1.png" alt="Customizable Kits">
-                    </div>
+                    <div class="feature-icon">🎁</div>
                     <h3>Customizable Kits</h3>
                     <p>Traditional ritual kits tailored to your preferences and regional customs</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">
-                        <img src="../assets/from-figma/wedding template image 1.png" alt="Premium Rentals">
-                    </div>
+                    <div class="feature-icon">👗</div>
                     <h3>Premium Rentals</h3>
                     <p>Designer attire and jewelry at affordable rental rates</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">
-                        <img src="../assets/from-figma/wedding template image 1.png" alt="Smart Planning">
-                    </div>
+                    <div class="feature-icon">📋</div>
                     <h3>Smart Planning</h3>
                     <p>Multi-checklist planner to keep you organized</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">
-                        <img src="../assets/from-figma/wedding template image 1.png" alt="Live Calculator">
-                    </div>
+                    <div class="feature-icon">💰</div>
                     <h3>Live Calculator</h3>
                     <p>Real-time budget estimation in INR</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">
-                        <img src="../assets/from-figma/wedding template image 1.png" alt="Saathi Concierge">
-                    </div>
+                    <div class="feature-icon">🤖</div>
                     <h3>Saathi - Your Concierge</h3>
                     <p>24/7 intelligent wedding assistant with cultural guidance and personalized support</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">
-                        <img src="../assets/from-figma/wedding template image 1.png" alt="Secure Payments">
-                    </div>
+                    <div class="feature-icon">🔒</div>
                     <h3>Secure Payments</h3>
                     <p>Safe transactions via Razorpay gateway</p>
                 </div>
@@ -1540,136 +1322,11 @@
         </section>
     </div>
 
-    <!-- Account Page Modal -->
-    <div class="modal" id="accountModal">
-        <div class="modal-content" style="max-width: 1000px;">
-            <div class="modal-header">
-                <h2>My Account</h2>
-                <button class="close-btn" onclick="closeAccountPage()" style="position: absolute; right: 2rem; top: 2rem; background: none; border: none; color: var(--white); font-size: 2rem; cursor: pointer;">&times;</button>
-            </div>
-            <div class="modal-body">
-                <div class="account-sections">
-                    <!-- Personal Information Section -->
-                    <div class="account-section">
-                        <h2>Personal Information</h2>
-                        <form>
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="firstName">First Name</label>
-                                    <input type="text" id="firstName" class="form-control" placeholder="Enter first name">
-                                </div>
-                                <div class="form-group">
-                                    <label for="lastName">Last Name</label>
-                                    <input type="text" id="lastName" class="form-control" placeholder="Enter last name">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label>I am the</label>
-                                <div class="radio-group">
-                                    <div class="radio-option">
-                                        <input type="radio" id="bride" name="role" value="bride">
-                                        <label for="bride">Bride</label>
-                                    </div>
-                                    <div class="radio-option">
-                                        <input type="radio" id="groom" name="role" value="groom">
-                                        <label for="groom">Groom</label>
-                                    </div>
-                                    <div class="radio-option">
-                                        <input type="radio" id="other" name="role" value="other">
-                                        <label for="other">Other (Family/Friend)</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <button type="button" class="btn-save" onclick="savePersonalInfo()">Save Changes</button>
-                        </form>
-                    </div>
-
-                    <!-- Wedding Date Section -->
-                    <div class="account-section">
-                        <h2>Wedding Date</h2>
-                        <form>
-                            <div class="form-group">
-                                <label for="weddingDateAccount">Wedding Date</label>
-                                <input type="date" id="weddingDateAccount" class="form-control">
-                            </div>
-                            <button type="button" class="btn-save" onclick="saveWeddingDate()">Update Date</button>
-                        </form>
-                    </div>
-
-                    <!-- Bank Account Linking Section -->
-                    <div class="account-section">
-                        <h2>Bank Account Linking</h2>
-                        <p style="color: var(--text-light); margin-bottom: 1rem;">Link your bank account for easy refunds and payouts</p>
-                        <ul class="bank-account-list" id="bankAccountList">
-                            <!-- Bank accounts will be listed here -->
-                        </ul>
-                        <button type="button" class="btn-save" onclick="addBankAccount()">+ Add Bank Account</button>
-                    </div>
-
-                    <!-- Addresses Section -->
-                    <div class="account-section">
-                        <h2>Addresses</h2>
-                        <form>
-                            <div class="form-group">
-                                <label for="street">Street Address</label>
-                                <input type="text" id="street" class="form-control" placeholder="Enter street address">
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="city">City</label>
-                                    <input type="text" id="city" class="form-control" placeholder="Enter city">
-                                </div>
-                                <div class="form-group">
-                                    <label for="state">State</label>
-                                    <input type="text" id="state" class="form-control" placeholder="Enter state">
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="pincode">PIN Code</label>
-                                    <input type="text" id="pincode" class="form-control" placeholder="Enter PIN code">
-                                </div>
-                                <div class="form-group">
-                                    <label for="country">Country</label>
-                                    <input type="text" id="country" class="form-control" placeholder="Enter country" value="India">
-                                </div>
-                            </div>
-                            <button type="button" class="btn-save" onclick="saveAddress()">Save Address</button>
-                        </form>
-                    </div>
-
-                    <!-- Contact Support Section -->
-                    <div class="account-section">
-                        <h2>Contact Support</h2>
-                        <p style="color: var(--text-light); margin-bottom: 1.5rem;">Need help? Our support team is here for you</p>
-                        <div class="support-options">
-                            <div class="support-card">
-                                <h4>Email Support</h4>
-                                <p>support@tithi.com</p>
-                                <button class="btn-link" onclick="window.location.href='mailto:support@tithi.com'">Send Email</button>
-                            </div>
-                            <div class="support-card">
-                                <h4>Phone Support</h4>
-                                <p>+91-XXXX-XXXXXX</p>
-                                <button class="btn-link" onclick="alert('Call feature coming soon!')">Call Now</button>
-                            </div>
-                            <div class="support-card">
-                                <h4>Live Chat</h4>
-                                <p>Available 24/7</p>
-                                <button class="btn-link" onclick="openChatbot()">Start Chat</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
-                <h3>About Tithi</h3>
-                <p>Your trusted partner for Indian wedding planning. We bring tradition and modern convenience together.</p>
+                <h3>About Aarambh</h3>
+                <p>Your trusted partner for luxury Indian wedding planning. We bring tradition and modern convenience together.</p>
             </div>
             <div class="footer-section">
                 <h3>Quick Links</h3>
@@ -1692,18 +1349,18 @@
             <div class="footer-section">
                 <h3>Contact</h3>
                 <ul class="footer-links">
-                    <li>Email: info@tithi.com</li>
-                    <li>Phone: +91 98765 43210</li>
-                    <li>Location: Mumbai, India</li>
+                    <li>📧 info@aarambh.com</li>
+                    <li>📞 +91 98765 43210</li>
+                    <li>📍 Mumbai, India</li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 Tithi. All rights reserved. | Privacy Policy | Terms of Service</p>
+            <p>&copy; 2024 Aarambh. All rights reserved. | Privacy Policy | Terms of Service</p>
         </div>
     </footer>
 
-    <button class="chatbot-button" onclick="toggleChatbot()" style="background: var(--primary-red); border: none; padding: 1rem; border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; cursor: pointer; box-shadow: var(--shadow-lg);">Chat</button>
+    <button class="chatbot-button" onclick="toggleChatbot()">💬</button>
 
     <div class="chatbot-window" id="chatbot">
         <div class="chatbot-header">
@@ -2219,151 +1876,6 @@
                 addToCart(item, item.category);
             }
         }
-
-        // Countdown Timer Functions
-        function updateCountdown() {
-            const weddingDate = localStorage.getItem('weddingDate');
-            const displayElement = document.getElementById('countdownDisplay');
-            
-            if (!weddingDate) {
-                displayElement.textContent = 'Set your wedding date to start the countdown';
-                return;
-            }
-            
-            const wedding = new Date(weddingDate);
-            const now = new Date();
-            const difference = wedding - now;
-            
-            if (difference < 0) {
-                displayElement.textContent = 'Your wedding day has passed!';
-                return;
-            }
-            
-            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-            const months = Math.floor(days / 30);
-            const remainingDays = days % 30;
-            
-            if (months > 0) {
-                displayElement.textContent = `${months} month${months !== 1 ? 's' : ''} ${remainingDays} day${remainingDays !== 1 ? 's' : ''} to go`;
-            } else {
-                displayElement.textContent = `${days} day${days !== 1 ? 's' : ''} to go`;
-            }
-        }
-
-        // Account Page Functions
-        function showAccountPage() {
-            document.getElementById('accountModal').classList.add('active');
-            loadAccountData();
-        }
-
-        function closeAccountPage() {
-            document.getElementById('accountModal').classList.remove('active');
-        }
-
-        function loadAccountData() {
-            // Load saved data from localStorage
-            const personalInfo = JSON.parse(localStorage.getItem('personalInfo') || '{}');
-            if (personalInfo.firstName) document.getElementById('firstName').value = personalInfo.firstName;
-            if (personalInfo.lastName) document.getElementById('lastName').value = personalInfo.lastName;
-            if (personalInfo.role) document.querySelector(`input[name="role"][value="${personalInfo.role}"]`).checked = true;
-            
-            const weddingDate = localStorage.getItem('weddingDate');
-            if (weddingDate) document.getElementById('weddingDateAccount').value = weddingDate;
-            
-            const address = JSON.parse(localStorage.getItem('address') || '{}');
-            if (address.street) document.getElementById('street').value = address.street;
-            if (address.city) document.getElementById('city').value = address.city;
-            if (address.state) document.getElementById('state').value = address.state;
-            if (address.pincode) document.getElementById('pincode').value = address.pincode;
-            if (address.country) document.getElementById('country').value = address.country;
-            
-            loadBankAccounts();
-        }
-
-        function savePersonalInfo() {
-            const personalInfo = {
-                firstName: document.getElementById('firstName').value,
-                lastName: document.getElementById('lastName').value,
-                role: document.querySelector('input[name="role"]:checked')?.value
-            };
-            localStorage.setItem('personalInfo', JSON.stringify(personalInfo));
-            alert('Personal information saved successfully!');
-        }
-
-        function saveWeddingDate() {
-            const weddingDate = document.getElementById('weddingDateAccount').value;
-            if (!weddingDate) {
-                alert('Please select a wedding date');
-                return;
-            }
-            localStorage.setItem('weddingDate', weddingDate);
-            updateCountdown();
-            alert('Wedding date updated successfully!');
-        }
-
-        function loadBankAccounts() {
-            const accounts = JSON.parse(localStorage.getItem('bankAccounts') || '[]');
-            const listElement = document.getElementById('bankAccountList');
-            
-            if (accounts.length === 0) {
-                listElement.innerHTML = '<li style="color: var(--text-light);">No bank accounts added yet</li>';
-                return;
-            }
-            
-            listElement.innerHTML = accounts.map((account, index) => `
-                <li class="bank-account-item">
-                    <div>
-                        <strong>${account.bankName}</strong><br>
-                        Account: ****${account.accountNumber.slice(-4)}
-                    </div>
-                    <button class="btn-link" onclick="removeBankAccount(${index})">Remove</button>
-                </li>
-            `).join('');
-        }
-
-        function addBankAccount() {
-            const bankName = prompt('Enter bank name:');
-            if (!bankName) return;
-            
-            const accountNumber = prompt('Enter account number:');
-            if (!accountNumber) return;
-            
-            const accounts = JSON.parse(localStorage.getItem('bankAccounts') || '[]');
-            accounts.push({ bankName, accountNumber });
-            localStorage.setItem('bankAccounts', JSON.stringify(accounts));
-            loadBankAccounts();
-            alert('Bank account added successfully!');
-        }
-
-        function removeBankAccount(index) {
-            if (!confirm('Are you sure you want to remove this bank account?')) return;
-            
-            const accounts = JSON.parse(localStorage.getItem('bankAccounts') || '[]');
-            accounts.splice(index, 1);
-            localStorage.setItem('bankAccounts', JSON.stringify(accounts));
-            loadBankAccounts();
-        }
-
-        function saveAddress() {
-            const address = {
-                street: document.getElementById('street').value,
-                city: document.getElementById('city').value,
-                state: document.getElementById('state').value,
-                pincode: document.getElementById('pincode').value,
-                country: document.getElementById('country').value
-            };
-            localStorage.setItem('address', JSON.stringify(address));
-            alert('Address saved successfully!');
-        }
-
-        function openChatbot() {
-            closeAccountPage();
-            toggleChatbot();
-        }
-
-        // Initialize countdown timer
-        updateCountdown();
-        setInterval(updateCountdown, 60000); // Update every minute
     </script>
 </body>
 </html>
