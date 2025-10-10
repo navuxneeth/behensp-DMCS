@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aarambh - Luxury Indian Wedding Solutions</title>
-    <meta name="description" content="Your one-stop solution for Indian wedding planning - Shaadi Boxes, rental services, and expert guidance">
+    <title>tithi</title>
+    <meta name="description" content="Your guide to a beautiful, stress-free wedding.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lora:wght@400;500;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -16,1866 +16,638 @@
         }
 
         :root {
-            --primary-maroon: #5C2121;
-            --bg-beige: #EAE0D1;
-            --accent-gold: #D4A037;
-            --dark-green: #2A402E;
-            --dark-blue: #1F2A40;
-            --text-dark: #1F2A40;
-            --text-light: #666666;
-            --white: #ffffff;
-            --shadow: 0 2px 8px rgba(0,0,0,0.08);
-            --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
+            --bg-main: #FFFBF4;
+            --primary-maroon: #761A1A;
+            --grey-light: #D9D9D9;
+            --text-dark: #000000;
+            --white: #FFFFFF;
+            --font-main: 'Questrial', 'Century Gothic', sans-serif;
+            --card-border-radius: 20px;
         }
 
         body {
-            font-family: 'Merriweather', serif;
-            line-height: 1.8;
+            font-family: var(--font-main);
+            background-color: var(--bg-main);
             color: var(--text-dark);
-            background-color: var(--bg-beige);
+            font-size: 16px;
         }
 
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-        }
-
+        /* --- Navbar --- */
         .navbar {
-            background: var(--white);
-            box-shadow: var(--shadow);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            padding: 1rem 0;
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
+            background-color: var(--bg-main);
+            /* I have used a placeholder for the motif pattern you mentioned. 
+               Please replace '/assets/images/motif_grey.png' with the correct path to your file. */
+            background-image: url('/assets/images/motif_grey.png');
+            background-repeat: repeat-x;
+            background-size: auto 100%;
+            padding: 1rem 3rem;
             display: flex;
+            align-items: center;
             justify-content: space-between;
-            align-items: center;
+            border-bottom: 1px solid var(--grey-light);
         }
 
-        .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--primary-maroon);
-        }
-
-        .logo span {
-            color: var(--accent-gold);
-        }
-
-        .nav-menu {
+        .nav-left {
             display: flex;
-            list-style: none;
-            gap: 2rem;
             align-items: center;
+            gap: 2rem;
+        }
+
+        .logo img {
+            height: 50px; /* Logo is now bigger */
+        }
+
+        .countdown-timer {
+            color: var(--primary-maroon);
+            font-weight: bold;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        .nav-center {
+            display: flex;
+            gap: 2.5rem;
         }
 
         .nav-link {
-            color: var(--text-dark);
             text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-            cursor: pointer;
+            color: var(--text-dark);
+            font-size: 1rem;
+            padding-bottom: 5px;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s;
         }
 
+        .nav-link.active,
         .nav-link:hover {
-            color: var(--primary-maroon);
+            border-bottom: 2px solid var(--primary-maroon);
         }
 
-        .btn {
-            padding: 0.9rem 2.5rem;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-weight: 500;
-            font-family: 'Merriweather', serif;
-            transition: all 0.3s;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 1rem;
-        }
-
-        .btn-primary {
-            background: var(--primary-maroon);
-            color: var(--white);
-        }
-
-        .btn-primary:hover {
-            background: #4a1818;
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .btn-outline {
-            background: transparent;
-            border: 2px solid var(--white);
-            color: var(--white);
-        }
-
-        .btn-outline:hover {
-            background: rgba(255, 255, 255, 0.15);
-            border-color: var(--white);
-        }
-
-        .hero {
-            background: var(--primary-maroon);
-            color: var(--white);
-            padding: 8rem 2rem;
-            text-align: center;
-        }
-
-        .hero-content {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .hero h1 {
-            font-size: 3.8rem;
-            margin-bottom: 1.5rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-            line-height: 1.3;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 3rem;
-            opacity: 0.97;
-            line-height: 1.8;
-            max-width: 850px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .hero-buttons {
+        .nav-right {
             display: flex;
+            align-items: center;
             gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 6rem 4rem;
-        }
-
-        .section {
-            margin-bottom: 8rem;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .section-header h2 {
-            font-size: 2.8rem;
+        .nav-button {
+            background-color: transparent;
+            border: 1px solid var(--primary-maroon);
             color: var(--primary-maroon);
-            margin-bottom: 1rem;
-            letter-spacing: 0.5px;
-        }
-
-        .section-header p {
-            color: var(--text-light);
-            font-size: 1.15rem;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 4rem;
-        }
-
-        .feature-card {
-            background: var(--white);
-            padding: 3rem 2.5rem;
+            padding: 0.6rem 1.5rem;
             border-radius: 8px;
-            box-shadow: var(--shadow);
-            transition: transform 0.3s, box-shadow 0.3s;
-            text-align: center;
-            border-top: 3px solid var(--accent-gold);
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .feature-icon {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .feature-card h3 {
-            color: var(--primary-maroon);
-            margin-bottom: 1rem;
-            font-size: 1.4rem;
-        }
-
-        .feature-card p {
-            line-height: 1.8;
-        }
-
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 4rem;
-        }
-
-        .product-card {
-            background: var(--white);
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: transform 0.3s, box-shadow 0.3s;
             cursor: pointer;
-        }
-
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .product-image {
-            width: 100%;
-            height: 220px;
-            background: linear-gradient(135deg, rgba(13, 91, 65, 0.1), rgba(201, 176, 104, 0.15));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary-color);
-            font-size: 4.5rem;
-        }
-
-        .product-content {
-            padding: 2rem;
-        }
-
-        .product-title {
-            font-size: 1.35rem;
-            color: var(--primary-maroon);
-            margin-bottom: 0.75rem;
-        }
-
-        .product-description {
-            color: var(--text-light);
-            font-size: 0.95rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.7;
-        }
-
-        .product-price {
-            font-size: 1.6rem;
-            color: var(--accent-gold);
-            font-weight: 600;
-            font-family: 'Lora', serif;
-        }
-
-        .product-badge {
-            display: inline-block;
-            background: var(--accent-gold);
-            color: var(--white);
-            padding: 0.4rem 1rem;
-            border-radius: 3px;
-            font-size: 0.75rem;
-            margin-bottom: 0.75rem;
-            font-weight: 500;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-        }
-
-        .calculator {
-            background: var(--white);
-            padding: 3rem;
-            border-radius: 8px;
-            box-shadow: var(--shadow);
-            border-top: 3px solid var(--accent-gold);
-        }
-
-        .form-group {
-            margin-bottom: 2rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.75rem;
-            color: var(--text-dark);
-            font-weight: 500;
-            font-size: 1.05rem;
-        }
-
-        .form-control {
-            width: 100%;
-            padding: 1rem;
-            border: 2px solid #e0e0e0;
-            border-radius: 6px;
+            font-family: var(--font-main);
             font-size: 1rem;
-            font-family: 'Merriweather', serif;
-            transition: all 0.3s;
-            background: var(--white);
-        }
-
-        .form-control:focus {
-            outline: none;
-            border-color: var(--primary-maroon);
-            box-shadow: 0 0 0 3px rgba(92, 33, 33, 0.1);
-        }
-
-        .form-control:hover {
-            border-color: var(--accent-gold);
-        }
-
-        .cost-result {
-            background: var(--white);
-            padding: 3rem;
-            border-radius: 8px;
-            margin-top: 2rem;
-            text-align: center;
-            border: 2px solid var(--accent-gold);
-        }
-
-        .cost-amount {
-            font-size: 3.5rem;
-            color: var(--primary-maroon);
-            font-weight: 700;
-            font-family: 'Lora', serif;
-        }
-
-        .chatbot-button {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: var(--primary-maroon);
-            color: var(--white);
-            border: none;
-            cursor: pointer;
-            font-size: 1.5rem;
-            box-shadow: var(--shadow-lg);
-            transition: transform 0.3s, background 0.3s;
-            z-index: 999;
-        }
-
-        .chatbot-button:hover {
-            transform: scale(1.1);
-            background: #4a1818;
-        }
-
-        .chatbot-window {
-            position: fixed;
-            bottom: 100px;
-            right: 2rem;
-            width: 380px;
-            height: 550px;
-            background: var(--white);
-            border-radius: 8px;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.15);
-            display: none;
-            flex-direction: column;
-            z-index: 999;
-            border: 1px solid rgba(201, 176, 104, 0.2);
-        }
-
-        .chatbot-window.active {
             display: flex;
-        }
-
-        .chatbot-header {
-            background: var(--primary-maroon);
-            color: var(--white);
-            padding: 1.25rem;
-            border-radius: 8px 8px 0 0;
-            display: flex;
-            justify-content: space-between;
             align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        
+        .nav-button.search-button {
+            padding: 0;
+            width: 40px; /* Made square */
+            height: 40px; /* Made square */
         }
 
-        .chatbot-header h3 {
-            font-size: 1.1rem;
-            font-weight: 500;
+        .search-icon {
+            width: 18px;
+            height: 18px;
+            background-color: var(--primary-maroon);
+            -webkit-mask: url('/assets/from-figma/search icon secondary.svg') no-repeat center;
+            mask: url('/assets/from-figma/search icon secondary.svg') no-repeat center;
+            transition: background-color 0.3s;
+        }
+        
+        .nav-button.search-button:hover .search-icon {
+            background-color: var(--white);
         }
 
-        .chatbot-messages {
-            flex: 1;
-            padding: 1rem;
-            overflow-y: auto;
-        }
-
-        .message {
-            margin-bottom: 1rem;
-            padding: 0.75rem;
-            border-radius: 10px;
-            max-width: 80%;
-        }
-
-        .message.bot {
-            background: var(--white);
-            margin-right: auto;
-            border: 1px solid #e0e0e0;
-        }
-
-        .message.user {
-            background: var(--primary-maroon);
+        .nav-button.primary {
+            background-color: var(--primary-maroon);
             color: var(--white);
-            margin-left: auto;
+        }
+        
+        .nav-button:hover {
+            background-color: #9c2b2b;
+            color: var(--white);
+            border-color: #9c2b2b;
+        }
+        
+        .nav-button.primary:hover {
+             background-color: #601010;
+             border-color: #601010;
+        }
+        
+        .nav-button img {
+            height: 16px;
         }
 
-        .chatbot-input {
+        /* --- Main Content --- */
+        .main-wrapper {
             display: flex;
-            padding: 1rem;
-            border-top: 1px solid #e0e0e0;
-        }
-
-        .chatbot-input input {
-            flex: 1;
-            padding: 0.75rem;
-            border: 1px solid #e0e0e0;
-            border-radius: 20px;
-            margin-right: 0.5rem;
-        }
-
-        .chatbot-input button {
-            padding: 0.75rem 1.5rem;
-            background: var(--primary-color);
-            color: var(--white);
-            border: none;
-            border-radius: 20px;
-            cursor: pointer;
-        }
-
-        .footer {
-            background: var(--dark-blue);
-            color: var(--white);
-            padding: 3rem 2rem 1rem;
-            margin-top: 4rem;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            padding: 2rem 3rem;
             gap: 2rem;
+        }
+
+        /* --- Sidebar --- */
+        .sidebar {
+            width: 250px;
+            flex-shrink: 0;
+        }
+
+        .filter-group {
             margin-bottom: 2rem;
         }
 
-        .footer-section h3 {
+        .filter-option {
             margin-bottom: 1rem;
-            color: var(--accent-gold);
+        }
+        
+        .filter-option label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
         }
 
-        .footer-links {
-            list-style: none;
+        .filter-option input[type="radio"] {
+            display: none;
         }
 
-        .footer-links li {
-            margin-bottom: 0.5rem;
+        .custom-radio {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--primary-maroon);
+            border-radius: 50%;
+            margin-right: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s;
         }
 
-        .footer-links a {
-            color: var(--white);
-            text-decoration: none;
-            opacity: 0.8;
+        .custom-radio::after {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background-color: var(--primary-maroon);
+            border-radius: 50%;
+            opacity: 0;
             transition: opacity 0.3s;
         }
 
-        .footer-links a:hover {
+        .filter-option input[type="radio"]:checked + .custom-radio::after {
             opacity: 1;
         }
 
-        .footer-bottom {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            opacity: 0.8;
+        /* --- Content Grid --- */
+        .content-grid {
+            flex-grow: 1;
         }
 
-        /* Cart Styles */
-        .cart-button {
-            position: relative;
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 1.5rem;
-            color: var(--text-dark);
-            padding: 0.5rem;
-            transition: color 0.3s;
-        }
-
-        .cart-button:hover {
-            color: var(--primary-maroon);
-        }
-
-        .cart-badge {
-            position: absolute;
-            top: -5px;
-            right: -5px;
-            background: var(--primary-maroon);
-            color: var(--white);
-            border-radius: 50%;
-            width: 20px;
-            height: 20px;
-            font-size: 0.75rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Lora', serif;
-        }
-
-        .cart-modal {
-            display: none;
-            position: fixed;
-            z-index: 2000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.6);
-            overflow-y: auto;
-        }
-
-        .cart-modal.active {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .cart-content {
-            background-color: var(--white);
-            margin: 2rem auto;
-            padding: 0;
-            border-radius: 8px;
-            max-width: 1200px;
-            width: 95%;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-            max-height: 95vh;
-            overflow-y: auto;
-        }
-
-        .cart-header {
-            background: var(--primary-maroon);
-            color: var(--white);
-            padding: 2rem;
-            border-radius: 8px 8px 0 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .cart-header h2 {
-            margin: 0;
-            font-size: 2rem;
-            color: var(--white);
-        }
-
-        .close-cart {
-            background: none;
-            border: none;
-            color: var(--white);
-            font-size: 2rem;
-            cursor: pointer;
-            padding: 0;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            transition: background 0.3s;
-        }
-
-        .close-cart:hover {
-            background: rgba(255,255,255,0.1);
-        }
-
-        .cart-filters {
-            display: flex;
-            gap: 1rem;
-            padding: 2rem 2rem 1rem 2rem;
-            border-bottom: 2px solid var(--bg-beige);
-        }
-
-        .filter-btn {
-            padding: 0.75rem 1.5rem;
-            border: 2px solid var(--accent-gold);
-            background: var(--white);
-            color: var(--text-dark);
-            border-radius: 6px;
-            cursor: pointer;
-            font-family: 'Merriweather', serif;
-            font-weight: 500;
-            transition: all 0.3s;
-        }
-
-        .filter-btn:hover {
-            background: var(--bg-beige);
-        }
-
-        .filter-btn.active {
-            background: var(--primary-maroon);
-            color: var(--white);
-            border-color: var(--primary-maroon);
-        }
-
-        .cart-items-grid {
+        .grid-container {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 2rem;
-            padding: 2rem;
         }
-
-        .cart-item {
-            background: var(--white);
-            border: 2px solid var(--bg-beige);
-            border-radius: 8px;
-            padding: 1.5rem;
-            transition: box-shadow 0.3s;
+        
+        /* Masonry Layout for Ideas Page */
+        #ideas-grid-container {
+            display: block;
+            column-count: 3;
+            column-gap: 1.5rem;
         }
-
-        .cart-item:hover {
-            box-shadow: var(--shadow-lg);
-        }
-
-        .cart-item-image {
+        
+        .idea-item-wrapper {
+            break-inside: avoid;
+            margin-bottom: 1.5rem;
+            display: inline-block;
             width: 100%;
-            height: 150px;
-            background: var(--bg-beige);
-            border-radius: 6px;
-            margin-bottom: 1rem;
+        }
+
+        .page {
+            display: none;
+        }
+        .page.active {
+            display: block;
+        }
+
+        .browse-card {
+            background-color: var(--primary-maroon);
+            height: 350px;
+            border-radius: var(--card-border-radius);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+
+        .browse-card-footer {
+            background-color: var(--white);
+            height: 60px;
+            width: 100%;
+        }
+        
+        .idea-card {
+            border-radius: var(--card-border-radius);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.07);
+            overflow: hidden;
+            position: relative;
+            background-color: var(--white);
+        }
+
+        .idea-card-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .idea-card-placeholder {
+            width: 100%;
+            border-radius: var(--card-border-radius);
+        }
+
+        .idea-card-save-btn {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid #eee;
+            border-radius: 8px;
+            width: 36px;
+            height: 36px;
+            cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--accent-gold);
-            font-size: 3rem;
+        }
+        
+        .idea-card-save-btn img {
+             height: 18px;
         }
 
-        .cart-item-name {
-            font-size: 1.1rem;
-            color: var(--primary-maroon);
-            margin-bottom: 0.75rem;
-            font-weight: 600;
-        }
-
-        .cart-item-category {
-            font-size: 0.85rem;
-            color: var(--text-light);
-            margin-bottom: 1rem;
-        }
-
-        .quantity-controls {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .quantity-btn {
-            width: 35px;
-            height: 35px;
-            border: 2px solid var(--accent-gold);
-            background: var(--white);
-            color: var(--text-dark);
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 1.2rem;
-            font-weight: bold;
-            transition: all 0.3s;
-        }
-
-        .quantity-btn:hover {
-            background: var(--primary-maroon);
-            color: var(--white);
-            border-color: var(--primary-maroon);
-        }
-
-        .quantity-input {
-            width: 60px;
-            text-align: center;
-            border: 2px solid var(--bg-beige);
-            border-radius: 6px;
-            padding: 0.5rem;
-            font-size: 1rem;
-            font-family: 'Lora', serif;
-        }
-
-        .cart-item-price {
-            font-size: 1.3rem;
-            color: var(--accent-gold);
-            font-weight: 700;
-            font-family: 'Lora', serif;
-            margin-bottom: 1rem;
-        }
-
-        .remove-item-btn {
-            width: 100%;
-            padding: 0.75rem;
-            background: none;
-            border: 2px solid #e74c3c;
-            color: #e74c3c;
-            border-radius: 6px;
-            cursor: pointer;
-            font-family: 'Merriweather', serif;
-            font-weight: 500;
-            transition: all 0.3s;
-        }
-
-        .remove-item-btn:hover {
-            background: #e74c3c;
-            color: var(--white);
-        }
-
-        .cart-summary {
-            padding: 2rem;
-            border-top: 3px solid var(--accent-gold);
-            background: var(--bg-beige);
-        }
-
-        .summary-row {
+        .idea-card-footer {
+            padding: 0.75rem 0.25rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
+            font-size: 0.9rem;
         }
 
-        .summary-row.total {
-            font-size: 1.5rem;
-            font-weight: 700;
+        .idea-card-footer a {
             color: var(--primary-maroon);
-            padding-top: 1rem;
-            border-top: 2px solid var(--accent-gold);
+            text-decoration: none;
+            font-weight: bold;
         }
-
-        .checkout-btn {
-            width: 100%;
-            padding: 1.25rem;
-            background: var(--primary-maroon);
-            color: var(--white);
-            border: none;
-            border-radius: 6px;
-            font-size: 1.2rem;
-            font-family: 'Playfair Display', serif;
-            font-weight: 600;
-            cursor: pointer;
-            margin-top: 1.5rem;
-            transition: all 0.3s;
-        }
-
-        .checkout-btn:hover {
-            background: #4a1818;
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .empty-cart {
-            text-align: center;
-            padding: 4rem 2rem;
-            color: var(--text-light);
-        }
-
-        .empty-cart-icon {
-            font-size: 5rem;
-            margin-bottom: 1rem;
-            opacity: 0.3;
-        }
-
-        @media (max-width: 1024px) {
-            .cart-items-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .nav-menu {
-                display: none;
-            }
-
-            .hero-buttons {
-                flex-direction: column;
-            }
-
-            .chatbot-window {
-                width: calc(100% - 2rem);
-                right: 1rem;
-            }
-
-            .cart-items-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .cart-filters {
-                flex-wrap: wrap;
-            }
-        }
-
+        
         .hidden {
             display: none;
         }
 
-        .loading {
-            text-align: center;
-            padding: 2rem;
-            color: var(--text-light);
-        }
-
-        /* Onboarding Modal */
+        /* --- Account Modal --- */
         .modal {
             display: none;
             position: fixed;
-            z-index: 2000;
+            z-index: 1000;
             left: 0;
             top: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0,0,0,0.6);
-            overflow-y: auto;
+            background-color: rgba(0,0,0,0.5);
+            align-items: center;
+            justify-content: center;
         }
 
         .modal.active {
             display: flex;
-            align-items: center;
-            justify-content: center;
         }
 
         .modal-content {
-            background-color: var(--white);
-            margin: 2rem auto;
-            padding: 0;
-            border-radius: 8px;
-            max-width: 700px;
+            background-color: var(--bg-main);
+            padding: 2rem;
+            border-radius: 16px;
             width: 90%;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-            max-height: 90vh;
-            overflow-y: auto;
+            max-width: 600px;
         }
 
         .modal-header {
-            background: var(--primary-maroon);
-            color: var(--white);
-            padding: 2rem;
-            border-radius: 8px 8px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
         }
 
         .modal-header h2 {
-            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        .close-button {
             font-size: 2rem;
-            color: var(--white);
+            border: none;
+            background: none;
+            cursor: pointer;
         }
-
-        .modal-header p {
-            margin: 0.5rem 0 0 0;
-            opacity: 0.95;
-        }
-
-        .modal-body {
-            padding: 2.5rem;
-        }
-
-        .onboarding-step {
-            display: none;
-        }
-
-        .onboarding-step.active {
-            display: block;
-        }
-
-        .onboarding-question {
-            margin-bottom: 2rem;
-        }
-
-        .onboarding-question label {
-            display: block;
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-            color: var(--secondary-color);
-            font-weight: 500;
-        }
-
-        .tradition-options {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1rem;
+        
+        .account-form .form-group {
             margin-bottom: 1.5rem;
         }
 
-        .tradition-option {
-            padding: 1rem;
-            border: 2px solid #e0e0e0;
-            border-radius: 6px;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.3s;
-            background: var(--white);
+        .account-form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
         }
 
-        .tradition-option:hover {
-            border-color: var(--accent-gold);
-        }
-
-        .tradition-option.selected {
-            border-color: var(--primary-color);
-            background: rgba(13, 91, 65, 0.05);
-        }
-
-        .tradition-option input[type="checkbox"] {
-            display: none;
-        }
-
-        .event-options {
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
-        }
-
-        .event-option {
-            padding: 1rem 1.5rem;
-            border: 2px solid #e0e0e0;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: all 0.3s;
-            display: flex;
-            align-items: center;
-        }
-
-        .event-option:hover {
-            border-color: var(--accent-gold);
-        }
-
-        .event-option.selected {
-            border-color: var(--primary-color);
-            background: rgba(13, 91, 65, 0.05);
-        }
-
-        .event-option input[type="checkbox"] {
-            margin-right: 1rem;
-        }
-
-        .modal-footer {
-            padding: 1.5rem 2.5rem;
-            border-top: 1px solid #e0e0e0;
-            display: flex;
-            justify-content: space-between;
-            gap: 1rem;
-        }
-
-        .btn-secondary {
-            background: #e0e0e0;
-            color: var(--text-dark);
-            padding: 0.9rem 2rem;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-family: 'Merriweather', serif;
-            transition: all 0.3s;
-        }
-
-        .btn-secondary:hover {
-            background: #d0d0d0;
-        }
-
-        .progress-dots {
-            display: flex;
-            gap: 0.5rem;
-            justify-content: center;
-            margin-bottom: 2rem;
-        }
-
-        .progress-dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: #e0e0e0;
-        }
-
-        .progress-dot.active {
-            background: var(--primary-maroon);
+        .account-form input,
+        .account-form select {
+            width: 100%;
+            padding: 0.8rem;
+            border-radius: 8px;
+            border: 1px solid var(--grey-light);
+            font-family: var(--font-main);
+            font-size: 1rem;
         }
     </style>
 </head>
 <body>
+
     <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">Aarambh<span>.</span></div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#shaadi-boxes" class="nav-link">Shaadi Boxes</a></li>
-                <li><a href="#rental" class="nav-link">Vendors & Services</a></li>
-                <li><a href="#calculator" class="nav-link">Weddings</a></li>
-                <li><a href="#checklist" class="nav-link">Blogs</a></li>
-                <li><button class="cart-button" onclick="toggleCart()">🛒<span class="cart-badge" id="cartBadge">0</span></button></li>
-                <li><button class="btn btn-primary" onclick="showLoginModal()">Login</button></li>
-            </ul>
+        <div class="nav-left">
+            <a href="#" class="logo"><img src="/assets/from-figma/tithi logo.png" alt="tithi logo"></a>
+            <div class="countdown-timer" id="countdownTimer">
+                -- months, -- days to go
+            </div>
+        </div>
+        <div class="nav-center">
+            <a href="#home" class="nav-link" onclick="navigateTo('home', this)">Home</a>
+            <a href="#browse" class="nav-link" onclick="navigateTo('browse', this)">Browse</a>
+            <a href="#plan" class="nav-link" onclick="navigateTo('plan', this)">Plan</a>
+            <a href="#ideas" class="nav-link active" onclick="navigateTo('ideas', this)">Ideas</a>
+        </div>
+        <div class="nav-right">
+            <button class="nav-button search-button">
+                <div class="search-icon"></div>
+            </button>
+            <button class="nav-button" onclick="showAccountModal()">Account</button>
+            <button class="nav-button primary">
+                <img src="/assets/from-figma/cart icon cta.svg" alt="Cart">
+                Cart
+            </button>
         </div>
     </nav>
 
-    <!-- Onboarding Modal -->
-    <div class="modal" id="onboardingModal">
+    <div class="main-wrapper">
+        <aside class="sidebar">
+            <div id="browse-filters" class="hidden">
+                <div class="filter-group">
+                    <div class="filter-option">
+                        <label>
+                            <input type="radio" name="event-type" value="pre-wedding" checked>
+                            <span class="custom-radio"></span>
+                            Pre-Wedding
+                        </label>
+                    </div>
+                    <div class="filter-option">
+                        <label>
+                            <input type="radio" name="event-type" value="on-wedding">
+                            <span class="custom-radio"></span>
+                            On Wedding
+                        </label>
+                    </div>
+                    <div class="filter-option">
+                        <label>
+                            <input type="radio" name="event-type" value="post-wedding">
+                            <span class="custom-radio"></span>
+                            Post-Wedding
+                        </label>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <div class="filter-option">
+                        <label>
+                            <input type="radio" name="sort-by" value="featured" checked>
+                            <span class="custom-radio"></span>
+                            Featured
+                        </label>
+                    </div>
+                    <div class="filter-option">
+                        <label>
+                            <input type="radio" name="sort-by" value="price-low-high">
+                            <span class="custom-radio"></span>
+                            Price: low to high
+                        </label>
+                    </div>
+                    <div class="filter-option">
+                        <label>
+                            <input type="radio" name="sort-by" value="price-high-low">
+                            <span class="custom-radio"></span>
+                            Price: high to low
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div id="ideas-filters">
+                 <p>Ideas Filters Here</p>
+            </div>
+        </aside>
+
+        <main class="content-grid">
+            <div id="home-page" class="page">
+                <h2>Welcome to tithi</h2>
+                <p>Your wedding planning journey starts here.</p>
+            </div>
+            <div id="browse-page" class="page">
+                <div id="browse-grid-container" class="grid-container">
+                    </div>
+            </div>
+            <div id="plan-page" class="page">
+                <h2>Plan Your Wedding</h2>
+                </div>
+            <div id="ideas-page" class="page active">
+                <div id="ideas-grid-container">
+                    </div>
+            </div>
+        </main>
+    </div>
+
+    <div id="accountModal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
-                <h2>Let's Begin Your Journey</h2>
-                <p>We'll help you create a personalized wedding experience</p>
+                <h2>My Account</h2>
+                <button class="close-button" onclick="closeAccountModal()">&times;</button>
             </div>
-            <div class="modal-body">
-                <div class="progress-dots">
-                    <span class="progress-dot active"></span>
-                    <span class="progress-dot"></span>
-                    <span class="progress-dot"></span>
+            <form class="account-form">
+                <div class="form-group">
+                    <label for="account-name">Name</label>
+                    <input type="text" id="account-name" placeholder="Enter your full name">
                 </div>
-
-                <!-- Step 1: Cultural Traditions -->
-                <div class="onboarding-step active" id="step1">
-                    <div class="onboarding-question">
-                        <label>Which cultural traditions are you honouring?</label>
-                        <p style="color: var(--text-light); margin-bottom: 1.5rem;">Select all that apply</p>
-                        <div class="tradition-options">
-                            <div class="tradition-option" onclick="toggleTradition('punjabi')">
-                                <input type="checkbox" id="tradition-punjabi" value="punjabi">
-                                <div style="font-size: 2rem; margin-bottom: 0.5rem;">🪔</div>
-                                <div>Punjabi</div>
-                            </div>
-                            <div class="tradition-option" onclick="toggleTradition('tamil')">
-                                <input type="checkbox" id="tradition-tamil" value="tamil">
-                                <div style="font-size: 2rem; margin-bottom: 0.5rem;">🌺</div>
-                                <div>Tamil</div>
-                            </div>
-                            <div class="tradition-option" onclick="toggleTradition('bengali')">
-                                <input type="checkbox" id="tradition-bengali" value="bengali">
-                                <div style="font-size: 2rem; margin-bottom: 0.5rem;">🪷</div>
-                                <div>Bengali</div>
-                            </div>
-                            <div class="tradition-option" onclick="toggleTradition('maharashtrian')">
-                                <input type="checkbox" id="tradition-maharashtrian" value="maharashtrian">
-                                <div style="font-size: 2rem; margin-bottom: 0.5rem;">🕉️</div>
-                                <div>Maharashtrian</div>
-                            </div>
-                            <div class="tradition-option" onclick="toggleTradition('gujarati')">
-                                <input type="checkbox" id="tradition-gujarati" value="gujarati">
-                                <div style="font-size: 2rem; margin-bottom: 0.5rem;">🎊</div>
-                                <div>Gujarati</div>
-                            </div>
-                            <div class="tradition-option" onclick="toggleTradition('south-indian')">
-                                <input type="checkbox" id="tradition-south-indian" value="south-indian">
-                                <div style="font-size: 2rem; margin-bottom: 0.5rem;">🪈</div>
-                                <div>South Indian</div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="form-group">
+                    <label for="account-role">I am the...</label>
+                    <select id="account-role">
+                        <option value="bride">Bride</option>
+                        <option value="groom">Groom</option>
+                        <option value="planner">Wedding Planner</option>
+                        <option value="other">Other</option>
+                    </select>
                 </div>
-
-                <!-- Step 2: Wedding Date -->
-                <div class="onboarding-step" id="step2">
-                    <div class="onboarding-question">
-                        <label>What is your estimated wedding date?</label>
-                        <input type="date" id="wedding-date" class="form-control" style="width: 100%; padding: 1rem; border: 2px solid #e0e0e0; border-radius: 6px; font-family: 'Merriweather', serif;">
-                    </div>
+                <div class="form-group">
+                    <label for="account-date">Wedding Date</label>
+                    <input type="date" id="account-date" onchange="updateWeddingDate(this.value)">
                 </div>
-
-                <!-- Step 3: Events -->
-                <div class="onboarding-step" id="step3">
-                    <div class="onboarding-question">
-                        <label>Which events are you planning?</label>
-                        <p style="color: var(--text-light); margin-bottom: 1.5rem;">Select all that apply</p>
-                        <div class="event-options">
-                            <div class="event-option" onclick="toggleEvent('roka')">
-                                <input type="checkbox" id="event-roka" value="roka">
-                                <div>
-                                    <strong>Roka/Engagement</strong>
-                                    <div style="color: var(--text-light); font-size: 0.9rem;">The formal announcement</div>
-                                </div>
-                            </div>
-                            <div class="event-option" onclick="toggleEvent('mehendi')">
-                                <input type="checkbox" id="event-mehendi" value="mehendi">
-                                <div>
-                                    <strong>Mehendi</strong>
-                                    <div style="color: var(--text-light); font-size: 0.9rem;">The henna ceremony</div>
-                                </div>
-                            </div>
-                            <div class="event-option" onclick="toggleEvent('haldi')">
-                                <input type="checkbox" id="event-haldi" value="haldi">
-                                <div>
-                                    <strong>Haldi</strong>
-                                    <div style="color: var(--text-light); font-size: 0.9rem;">The turmeric ceremony</div>
-                                </div>
-                            </div>
-                            <div class="event-option" onclick="toggleEvent('sangeet')">
-                                <input type="checkbox" id="event-sangeet" value="sangeet">
-                                <div>
-                                    <strong>Sangeet</strong>
-                                    <div style="color: var(--text-light); font-size: 0.9rem;">The musical night</div>
-                                </div>
-                            </div>
-                            <div class="event-option" onclick="toggleEvent('wedding')">
-                                <input type="checkbox" id="event-wedding" value="wedding" checked>
-                                <div>
-                                    <strong>Wedding Ceremony</strong>
-                                    <div style="color: var(--text-light); font-size: 0.9rem;">The main ceremony</div>
-                                </div>
-                            </div>
-                            <div class="event-option" onclick="toggleEvent('reception')">
-                                <input type="checkbox" id="event-reception" value="reception">
-                                <div>
-                                    <strong>Reception</strong>
-                                    <div style="color: var(--text-light); font-size: 0.9rem;">The celebration dinner</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="form-group">
+                    <label for="account-address">Addresses</label>
+                    <input type="text" id="account-address" placeholder="Manage your addresses">
                 </div>
-            </div>
-            <div class="modal-footer">
-                <button class="btn-secondary" id="prevBtn" onclick="previousStep()" style="display: none;">Previous</button>
-                <button class="btn btn-primary" id="nextBtn" onclick="nextStep()">Next</button>
-            </div>
+                <div class="form-group">
+                    <label for="account-bank">Bank Account</label>
+                    <input type="text" id="account-bank" placeholder="Link your bank account">
+                </div>
+                <button type="button" class="nav-button primary" style="width: 100%;">Save Changes</button>
+                 <a href="#" style="display: block; text-align: center; margin-top: 1rem; color: var(--primary-maroon);">Contact Support</a>
+            </form>
         </div>
     </div>
 
-    <!-- Cart Modal -->
-    <div class="cart-modal" id="cartModal">
-        <div class="cart-content">
-            <div class="cart-header">
-                <h2>My Cart</h2>
-                <button class="close-cart" onclick="toggleCart()">&times;</button>
-            </div>
-            <div class="cart-filters">
-                <button class="filter-btn active" onclick="filterCart('all')">All</button>
-                <button class="filter-btn" onclick="filterCart('Pre-Wedding')">Pre-wedding</button>
-                <button class="filter-btn" onclick="filterCart('Wedding')">Wedding</button>
-                <button class="filter-btn" onclick="filterCart('Post-Wedding')">Post-wedding</button>
-            </div>
-            <div id="cartItemsContainer">
-                <!-- Cart items will be dynamically inserted here -->
-            </div>
-            <div class="cart-summary">
-                <div class="summary-row">
-                    <span>Subtotal:</span>
-                    <span id="cartSubtotal">₹0</span>
-                </div>
-                <div class="summary-row">
-                    <span>Taxes (estimated):</span>
-                    <span id="cartTaxes">₹0</span>
-                </div>
-                <div class="summary-row total">
-                    <span>Grand Total:</span>
-                    <span id="cartTotal">₹0</span>
-                </div>
-                <button class="checkout-btn" onclick="proceedToCheckout()">Proceed to Checkout</button>
-            </div>
-        </div>
-    </div>
-
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <h1>Wedding Rituals and Tradition, Simplified</h1>
-            <p>Your guide to a beautiful, stress-free wedding begins here. For modern Indian families, we provide culturally-authentic, fully customizable ritual kits and logistical solutions.</p>
-            <div class="hero-buttons">
-                <button class="btn btn-primary" onclick="showOnboardingFlow()">Start Planning</button>
-                <button class="btn btn-outline" onclick="scrollToSection('shaadi-boxes')">Explore Our Collections</button>
-            </div>
-        </div>
-    </section>
-
-    <div class="container">
-        <section class="section">
-            <div class="section-header">
-                <h2>Your Complete Wedding Solution</h2>
-                <p>Everything you need to honour tradition with modern convenience and elegance</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🎁</div>
-                    <h3>Customizable Kits</h3>
-                    <p>Traditional ritual kits tailored to your preferences and regional customs</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">👗</div>
-                    <h3>Premium Rentals</h3>
-                    <p>Designer attire and jewelry at affordable rental rates</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📋</div>
-                    <h3>Smart Planning</h3>
-                    <p>Multi-checklist planner to keep you organized</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">💰</div>
-                    <h3>Live Calculator</h3>
-                    <p>Real-time budget estimation in INR</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🤖</div>
-                    <h3>Saathi - Your Concierge</h3>
-                    <p>24/7 intelligent wedding assistant with cultural guidance and personalized support</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🔒</div>
-                    <h3>Secure Payments</h3>
-                    <p>Safe transactions via Razorpay gateway</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="section" id="shaadi-boxes">
-            <div class="section-header">
-                <h2>Shaadi Boxes</h2>
-                <p>Curated collections for every ceremony</p>
-            </div>
-            <div id="ritual-kits-grid" class="products-grid">
-                <div class="loading">Loading Shaadi Boxes...</div>
-            </div>
-        </section>
-
-        <section class="section" id="rental">
-            <div class="section-header">
-                <h2>Premium Rental Services</h2>
-                <p>Exquisite attire and jewelry for your special day</p>
-            </div>
-            <div id="rental-grid" class="products-grid">
-                <div class="loading">Loading rental items...</div>
-            </div>
-        </section>
-
-        <section class="section" id="calculator">
-            <div class="section-header">
-                <h2>Wedding Budget Calculator</h2>
-                <p>Get an instant estimate of your wedding costs in INR</p>
-            </div>
-            <div class="calculator">
-                <form id="calculator-form">
-                    <div class="form-group">
-                        <label for="guestCount">Number of Guests</label>
-                        <input type="number" id="guestCount" class="form-control" placeholder="e.g., 200" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="venue">Venue Quality</label>
-                        <select id="venue" class="form-control" required>
-                            <option value="">Select...</option>
-                            <option value="basic">Basic</option>
-                            <option value="standard">Standard</option>
-                            <option value="premium">Premium</option>
-                            <option value="luxury">Luxury</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="catering">Catering Quality</label>
-                        <select id="catering" class="form-control" required>
-                            <option value="">Select...</option>
-                            <option value="basic">Basic</option>
-                            <option value="standard">Standard</option>
-                            <option value="premium">Premium</option>
-                            <option value="luxury">Luxury</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="numberOfEvents">Number of Events</label>
-                        <input type="number" id="numberOfEvents" class="form-control" value="3" min="1" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary" style="width: 100%;">Calculate Budget</button>
-                </form>
-                <div id="calculator-result" class="cost-result hidden">
-                    <h3>Estimated Wedding Cost</h3>
-                    <div class="cost-amount" id="total-cost">₹0</div>
-                    <p>Per Guest: <span id="per-guest-cost">₹0</span></p>
-                </div>
-            </div>
-        </section>
-
-        <section class="section" id="checklist">
-            <div class="section-header">
-                <h2>Wedding Planning Checklist</h2>
-                <p>Stay organized with our comprehensive task manager</p>
-            </div>
-            <div class="calculator">
-                <form id="checklist-form">
-                    <div class="form-group">
-                        <label for="brideName">Bride's Name</label>
-                        <input type="text" id="brideName" class="form-control" placeholder="Enter bride's name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="groomName">Groom's Name</label>
-                        <input type="text" id="groomName" class="form-control" placeholder="Enter groom's name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="weddingDate">Wedding Date</label>
-                        <input type="date" id="weddingDate" class="form-control" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary" style="width: 100%;">Generate Checklist</button>
-                </form>
-                <div id="checklist-result" class="hidden" style="margin-top: 2rem;">
-                    <h3>Your Personalized Checklist</h3>
-                    <p>A comprehensive checklist has been created for your wedding! Download the full checklist or access it from your dashboard.</p>
-                    <button class="btn btn-primary" onclick="alert('Checklist saved to your account!')">Save to Dashboard</button>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>About Aarambh</h3>
-                <p>Your trusted partner for luxury Indian wedding planning. We bring tradition and modern convenience together.</p>
-            </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul class="footer-links">
-                    <li><a href="#shaadi-boxes">Shaadi Boxes</a></li>
-                    <li><a href="#rental">Vendors & Services</a></li>
-                    <li><a href="#calculator">Budget Calculator</a></li>
-                    <li><a href="#checklist">Wedding Planner</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Support</h3>
-                <ul class="footer-links">
-                    <li><a href="#">Help Center</a></li>
-                    <li><a href="#">FAQs</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">B2B Services</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Contact</h3>
-                <ul class="footer-links">
-                    <li>📧 info@aarambh.com</li>
-                    <li>📞 +91 98765 43210</li>
-                    <li>📍 Mumbai, India</li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Aarambh. All rights reserved. | Privacy Policy | Terms of Service</p>
-        </div>
-    </footer>
-
-    <button class="chatbot-button" onclick="toggleChatbot()">💬</button>
-
-    <div class="chatbot-window" id="chatbot">
-        <div class="chatbot-header">
-            <h3>Saathi - Your Wedding Concierge</h3>
-            <button onclick="toggleChatbot()" style="background: transparent; border: none; color: white; cursor: pointer; font-size: 1.5rem;">×</button>
-        </div>
-        <div class="chatbot-messages" id="chatbot-messages">
-            <div class="message bot">
-                Namaste! 🙏 I'm Saathi, your dedicated wedding concierge. I'm here to guide you through every step of your beautiful journey. How may I assist you today?
-            </div>
-        </div>
-        <div class="chatbot-input">
-            <input type="text" id="chatbot-input-field" placeholder="Ask Saathi anything..." onkeypress="handleChatKeyPress(event)">
-            <button onclick="sendChatMessage()">Send</button>
-        </div>
-    </div>
 
     <script>
-        let currentStep = 1;
-        let onboardingData = {
-            traditions: [],
-            weddingDate: '',
-            events: ['wedding']
-        };
+        // --- Navigation ---
+        function navigateTo(pageId, element) {
+            document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+            document.getElementById(pageId + '-page').classList.add('active');
 
-        function scrollToSection(id) {
-            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-        }
-
-        function showOnboardingFlow() {
-            document.getElementById('onboardingModal').classList.add('active');
-            currentStep = 1;
-            updateStepDisplay();
-        }
-
-        function closeOnboardingModal() {
-            document.getElementById('onboardingModal').classList.remove('active');
-        }
-
-        function toggleTradition(tradition) {
-            const checkbox = document.getElementById('tradition-' + tradition);
-            const option = checkbox.parentElement;
+            document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+            element.classList.add('active');
             
-            checkbox.checked = !checkbox.checked;
-            option.classList.toggle('selected');
-            
-            if (checkbox.checked) {
-                onboardingData.traditions.push(tradition);
-            } else {
-                onboardingData.traditions = onboardingData.traditions.filter(t => t !== tradition);
+            document.getElementById('browse-filters').classList.toggle('hidden', pageId !== 'browse');
+            document.getElementById('ideas-filters').classList.toggle('hidden', pageId !== 'ideas');
+
+            if (pageId === 'browse') {
+                loadBrowseItems();
+            }
+            if (pageId === 'ideas') {
+                loadIdeasItems();
+            }
+        }
+        
+        // --- Countdown Timer ---
+        let weddingDate = localStorage.getItem('weddingDate') || '2026-04-01';
+        
+        function updateWeddingDate(newDate) {
+            if (newDate) {
+                weddingDate = newDate;
+                localStorage.setItem('weddingDate', newDate);
+                updateCountdown();
             }
         }
 
-        function toggleEvent(event) {
-            const checkbox = document.getElementById('event-' + event);
-            const option = checkbox.parentElement;
-            
-            checkbox.checked = !checkbox.checked;
-            option.classList.toggle('selected');
-            
-            if (checkbox.checked) {
-                if (!onboardingData.events.includes(event)) {
-                    onboardingData.events.push(event);
-                }
-            } else {
-                onboardingData.events = onboardingData.events.filter(e => e !== event);
-            }
-        }
+        function updateCountdown() {
+            const countdownElement = document.getElementById('countdownTimer');
+            const targetDate = new Date(weddingDate);
+            const now = new Date();
 
-        function nextStep() {
-            if (currentStep === 1 && onboardingData.traditions.length === 0) {
-                alert('Please select at least one cultural tradition');
-                return;
-            }
-            
-            if (currentStep === 2) {
-                const dateInput = document.getElementById('wedding-date');
-                if (!dateInput.value) {
-                    alert('Please select your wedding date');
-                    return;
-                }
-                onboardingData.weddingDate = dateInput.value;
-            }
-
-            if (currentStep === 3) {
-                // Final step - save and redirect
-                localStorage.setItem('onboardingData', JSON.stringify(onboardingData));
-                closeOnboardingModal();
-                scrollToSection('ritual-kits');
+            if (targetDate < now) {
+                countdownElement.textContent = "Congratulations!";
                 return;
             }
 
-            currentStep++;
-            updateStepDisplay();
-        }
+            let months = (targetDate.getFullYear() - now.getFullYear()) * 12;
+            months -= now.getMonth();
+            months += targetDate.getMonth();
+            
+            let days = targetDate.getDate() - now.getDate();
+            if (days < 0) {
+                 months--;
+                 const prevMonth = new Date(targetDate.getFullYear(), targetDate.getMonth(), 0);
+                 days += prevMonth.getDate();
+            }
+            
+            if (months < 0) months = 0;
 
-        function previousStep() {
-            if (currentStep > 1) {
-                currentStep--;
-                updateStepDisplay();
+            countdownElement.textContent = `${months} months, ${days} days to go`;
+        }
+        
+        // --- Content Loading ---
+        function loadBrowseItems() {
+            const grid = document.getElementById('browse-grid-container');
+            if (grid.children.length > 0) return; // Don't reload if already populated
+            grid.innerHTML = '';
+            for (let i = 0; i < 12; i++) {
+                const card = document.createElement('div');
+                card.className = 'browse-card';
+                card.innerHTML = `<div class="browse-card-footer"></div>`;
+                grid.appendChild(card);
             }
         }
 
-        function updateStepDisplay() {
-            // Hide all steps
-            document.querySelectorAll('.onboarding-step').forEach(step => {
-                step.classList.remove('active');
+        function loadIdeasItems() {
+            const grid = document.getElementById('ideas-grid-container');
+            if (grid.children.length > 0) return; // Don't reload if already populated
+            grid.innerHTML = '';
+            const placeholderColors = ['#BEA3A3', '#761A1A', '#905757', '#8D6565', '#EAD9D9'];
+            
+            const ideas = [
+                { img: '/assets/from-figma/wedding template image 1.png', title: 'Unforgettable flower splash exit' },
+                { img: null, title: 'Elegant Mandap Designs' },
+                { img: null, title: 'Modern Sangeet Themes' },
+                { img: null, title: 'Minimalist Haldi Decor' },
+                { img: null, title: 'Royal Bridal Entries' },
+                { img: null, title: 'Unique Guest Favors' },
+                { img: null, title: 'Pastel Color Palettes' },
+                { img: null, title: 'Interactive Food Stations' },
+            ];
+
+            ideas.forEach(idea => {
+                const wrapper = document.createElement('div');
+                wrapper.className = 'idea-item-wrapper';
+
+                const card = document.createElement('div');
+                card.className = 'idea-card';
+                
+                const randomHeight = Math.floor(Math.random() * (420 - 280 + 1)) + 280;
+                const randomColor = placeholderColors[Math.floor(Math.random() * placeholderColors.length)];
+
+                const imageHtml = idea.img 
+                    ? `<img src="${idea.img}" alt="${idea.title}" class="idea-card-image">`
+                    : `<div class="idea-card-placeholder" style="height: ${randomHeight}px; background-color: ${randomColor};"></div>`;
+                
+                card.innerHTML = `
+                    ${imageHtml}
+                    <button class="idea-card-save-btn">
+                        <img src="/assets/from-figma/save icon for the ideas page.svg" alt="Save">
+                    </button>
+                `;
+                
+                const footer = document.createElement('div');
+                footer.className = 'idea-card-footer';
+                footer.innerHTML = `
+                    <span>${idea.title}</span>
+                    <a href="#">More</a>
+                `;
+
+                wrapper.appendChild(card);
+                wrapper.appendChild(footer);
+                grid.appendChild(wrapper);
             });
-            
-            // Show current step
-            document.getElementById('step' + currentStep).classList.add('active');
-            
-            // Update progress dots
-            document.querySelectorAll('.progress-dot').forEach((dot, index) => {
-                if (index < currentStep) {
-                    dot.classList.add('active');
-                } else {
-                    dot.classList.remove('active');
-                }
-            });
-            
-            // Update buttons
-            const prevBtn = document.getElementById('prevBtn');
-            const nextBtn = document.getElementById('nextBtn');
-            
-            if (currentStep === 1) {
-                prevBtn.style.display = 'none';
-            } else {
-                prevBtn.style.display = 'block';
-            }
-            
-            if (currentStep === 3) {
-                nextBtn.textContent = 'Start Planning';
-            } else {
-                nextBtn.textContent = 'Next';
-            }
+        }
+        
+        // --- Account Modal ---
+        function showAccountModal() {
+            document.getElementById('accountModal').classList.add('active');
+            document.getElementById('account-date').value = weddingDate;
         }
 
-        // Initialize selected event on load
-        window.addEventListener('DOMContentLoaded', function() {
-            const weddingOption = document.querySelector('#event-wedding').parentElement;
-            weddingOption.classList.add('selected');
-        });
-
-        function toggleChatbot() {
-            const chatbot = document.getElementById('chatbot');
-            chatbot.classList.toggle('active');
+        function closeAccountModal() {
+            document.getElementById('accountModal').classList.remove('active');
         }
 
-        function handleChatKeyPress(event) {
-            if (event.key === 'Enter') {
-                sendChatMessage();
-            }
-        }
-
-        async function sendChatMessage() {
-            const input = document.getElementById('chatbot-input-field');
-            const message = input.value.trim();
-            
-            if (!message) return;
-
-            const messagesContainer = document.getElementById('chatbot-messages');
-            
-            const userMessage = document.createElement('div');
-            userMessage.className = 'message user';
-            userMessage.textContent = message;
-            messagesContainer.appendChild(userMessage);
-            
-            input.value = '';
-            messagesContainer.scrollTop = messagesContainer.scrollHeight;
-
-            try {
-                const response = await fetch('/api/chatbot/chat', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ message })
-                });
-                
-                const data = await response.json();
-                
-                const botMessage = document.createElement('div');
-                botMessage.className = 'message bot';
-                botMessage.textContent = data.message;
-                messagesContainer.appendChild(botMessage);
-                
-                messagesContainer.scrollTop = messagesContainer.scrollHeight;
-            } catch (error) {
-                console.error('Error:', error);
-            }
-        }
-
-        async function loadRitualKits() {
-            try {
-                const response = await fetch('/api/ritual-kits?popular=true');
-                const kits = await response.json();
-                
-                const grid = document.getElementById('ritual-kits-grid');
-                grid.innerHTML = kits.slice(0, 3).map(kit => `
-                    <div class="product-card">
-                        <div class="product-image">${kit.name.includes('Haldi') ? '🌼' : kit.name.includes('Mehendi') ? '✋' : '🕉️'}</div>
-                        <div class="product-content">
-                            ${kit.isPopular ? '<span class="product-badge">Popular</span>' : ''}
-                            <h3 class="product-title">${kit.name}</h3>
-                            <p class="product-description">${kit.description}</p>
-                            <div class="product-price">₹${kit.basePrice.toLocaleString()}</div>
-                            <button class="btn btn-primary" style="margin-top: 1rem; width: 100%;">View Details</button>
-                        </div>
-                    </div>
-                `).join('');
-            } catch (error) {
-                console.error('Error loading ritual kits:', error);
-            }
-        }
-
-        async function loadRentalItems() {
-            try {
-                const response = await fetch('/api/rental?available=true');
-                const items = await response.json();
-                
-                const grid = document.getElementById('rental-grid');
-                grid.innerHTML = items.slice(0, 3).map(item => `
-                    <div class="product-card">
-                        <div class="product-image">${item.category.includes('Bridal') ? '👰' : item.category.includes('Groom') ? '🤵' : '💍'}</div>
-                        <div class="product-content">
-                            <h3 class="product-title">${item.name}</h3>
-                            <p class="product-description">${item.description.substring(0, 80)}...</p>
-                            <div class="product-price">₹${item.dailyRentalPrice.toLocaleString()}/day</div>
-                            <button class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Check Availability</button>
-                        </div>
-                    </div>
-                `).join('');
-            } catch (error) {
-                console.error('Error loading rental items:', error);
-            }
-        }
-
-        document.getElementById('calculator-form').addEventListener('submit', async (e) => {
-            e.preventDefault();
-            
-            const formData = {
-                guestCount: parseInt(document.getElementById('guestCount').value),
-                venue: document.getElementById('venue').value,
-                catering: document.getElementById('catering').value,
-                numberOfEvents: parseInt(document.getElementById('numberOfEvents').value),
-                decoration: document.getElementById('venue').value,
-                photography: 'standard',
-                brideAttire: 'standard',
-                groomAttire: 'standard',
-                jewelry: 'standard',
-                jewelryType: 'rental',
-                rituals: 'standard',
-                entertainment: 'standard'
-            };
-
-            try {
-                const response = await fetch('/api/calculator/estimate', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(formData)
-                });
-                
-                const data = await response.json();
-                
-                document.getElementById('total-cost').textContent = `₹${data.total.toLocaleString()}`;
-                document.getElementById('per-guest-cost').textContent = `₹${data.perGuestCost.toLocaleString()}`;
-                document.getElementById('calculator-result').classList.remove('hidden');
-            } catch (error) {
-                console.error('Error calculating budget:', error);
-            }
-        });
-
-        document.getElementById('checklist-form').addEventListener('submit', async (e) => {
-            e.preventDefault();
-            
-            const formData = {
-                brideName: document.getElementById('brideName').value,
-                groomName: document.getElementById('groomName').value,
-                weddingDate: document.getElementById('weddingDate').value,
-                isB2B: false
-            };
-
-            try {
-                const response = await fetch('/api/checklist/create', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(formData)
-                });
-                
-                const data = await response.json();
-                
-                document.getElementById('checklist-result').classList.remove('hidden');
-            } catch (error) {
-                console.error('Error creating checklist:', error);
-            }
-        });
-
+        // --- Initial Load ---
         document.addEventListener('DOMContentLoaded', () => {
-            loadRitualKits();
-            loadRentalItems();
+            updateCountdown();
+            setInterval(updateCountdown, 60 * 60 * 1000); // Update every hour
+            navigateTo('ideas', document.querySelector('.nav-link[href="#ideas"]'));
         });
-
-        function showLoginModal() {
-            alert('Login functionality coming soon! This would integrate with the authentication system.');
-        }
-
-        // Cart functionality
-        let cart = [];
-        let currentFilter = 'all';
-
-        function toggleCart() {
-            const cartModal = document.getElementById('cartModal');
-            cartModal.classList.toggle('active');
-            if (cartModal.classList.contains('active')) {
-                renderCart();
-            }
-        }
-
-        function addToCart(item, category) {
-            const existingItem = cart.find(cartItem => cartItem.id === item.id);
-            if (existingItem) {
-                existingItem.quantity++;
-            } else {
-                cart.push({
-                    id: item.id,
-                    name: item.name,
-                    category: category,
-                    price: item.basePrice || item.dailyRentalPrice,
-                    quantity: 1,
-                    image: item.images ? item.images[0] : ''
-                });
-            }
-            updateCartBadge();
-            alert(`${item.name} added to cart!`);
-        }
-
-        function removeFromCart(itemId) {
-            cart = cart.filter(item => item.id !== itemId);
-            updateCartBadge();
-            renderCart();
-        }
-
-        function updateQuantity(itemId, change) {
-            const item = cart.find(cartItem => cartItem.id === itemId);
-            if (item) {
-                item.quantity += change;
-                if (item.quantity <= 0) {
-                    removeFromCart(itemId);
-                } else {
-                    renderCart();
-                }
-            }
-        }
-
-        function updateCartBadge() {
-            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-            document.getElementById('cartBadge').textContent = totalItems;
-        }
-
-        function filterCart(category) {
-            currentFilter = category;
-            
-            // Update active button
-            const filterButtons = document.querySelectorAll('.filter-btn');
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
-            
-            renderCart();
-        }
-
-        function renderCart() {
-            const container = document.getElementById('cartItemsContainer');
-            
-            let filteredCart = cart;
-            if (currentFilter !== 'all') {
-                filteredCart = cart.filter(item => item.category === currentFilter);
-            }
-            
-            if (filteredCart.length === 0) {
-                container.innerHTML = `
-                    <div class="empty-cart">
-                        <div class="empty-cart-icon">🛒</div>
-                        <h3>Your cart is empty</h3>
-                        <p>Add some Shaadi Boxes or rental items to get started!</p>
-                    </div>
-                `;
-            } else {
-                container.innerHTML = `
-                    <div class="cart-items-grid">
-                        ${filteredCart.map(item => `
-                            <div class="cart-item">
-                                <div class="cart-item-image">
-                                    📦
-                                </div>
-                                <h4 class="cart-item-name">${item.name}</h4>
-                                <p class="cart-item-category">${item.category}</p>
-                                <div class="quantity-controls">
-                                    <button class="quantity-btn decrease-btn" data-id="${item.id}">-</button>
-                                    <input type="number" class="quantity-input" value="${item.quantity}" readonly>
-                                    <button class="quantity-btn increase-btn" data-id="${item.id}">+</button>
-                                </div>
-                                <div class="cart-item-price">₹${(item.price * item.quantity).toLocaleString()}</div>
-                                <button class="remove-item-btn" data-id="${item.id}">Remove</button>
-                            </div>
-                        `).join('')}
-                    </div>
-                `;
-            }
-
-            // Attach event listeners to quantity buttons and remove buttons
-            container.querySelectorAll('.decrease-btn').forEach(btn => {
-                btn.addEventListener('click', function() {
-                    const id = btn.getAttribute('data-id');
-                    updateQuantity(id, -1);
-                });
-            });
-            container.querySelectorAll('.increase-btn').forEach(btn => {
-                btn.addEventListener('click', function() {
-                    const id = btn.getAttribute('data-id');
-                    updateQuantity(id, 1);
-                });
-            });
-            container.querySelectorAll('.remove-item-btn').forEach(btn => {
-                btn.addEventListener('click', function() {
-                    const id = btn.getAttribute('data-id');
-                    removeFromCart(id);
-                });
-            });
-            updateCartSummary();
-        }
-
-        function updateCartSummary() {
-            const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-            const taxes = Math.round(subtotal * 0.18); // 18% GST
-            const total = subtotal + taxes;
-            
-            document.getElementById('cartSubtotal').textContent = `₹${subtotal.toLocaleString()}`;
-            document.getElementById('cartTaxes').textContent = `₹${taxes.toLocaleString()}`;
-            document.getElementById('cartTotal').textContent = `₹${total.toLocaleString()}`;
-        }
-
-        function proceedToCheckout() {
-            if (cart.length === 0) {
-                alert('Your cart is empty! Please add items before checkout.');
-                return;
-            }
-            alert(`Proceeding to checkout with ${cart.length} items. Total: ${document.getElementById('cartTotal').textContent}`);
-        }
-
-        // Store items globally for cart access
-        let allRitualKits = [];
-        let allRentalItems = [];
-
-        // Update the existing loadRitualKits function to add "Add to Cart" buttons
-        async function loadRitualKits() {
-            try {
-                const response = await fetch('/api/ritual-kits');
-                const kits = await response.json();
-                allRitualKits = kits;
-                const grid = document.getElementById('ritual-kits-grid');
-                
-                grid.innerHTML = kits.map((kit, index) => `
-                    <div class="product-card">
-                        <div class="product-icon">
-                            ${kit.isPopular ? '<span class="product-badge">Popular</span>' : ''}
-                            📦
-                        </div>
-                        <div class="product-content">
-                            <h3 class="product-title">${kit.name}</h3>
-                            <p class="product-description">${kit.description}</p>
-                            <div class="product-price">₹${kit.basePrice.toLocaleString()}</div>
-                            <button class="btn btn-primary" style="margin-top: 1rem; width: 100%;" onclick="addItemToCart('kit', ${index})">Add to Cart</button>
-                        </div>
-                    </div>
-                `).join('');
-            } catch (error) {
-                console.error('Error loading ritual kits:', error);
-            }
-        }
-
-        // Update the existing loadRentalItems function to add "Add to Cart" buttons
-        async function loadRentalItems() {
-            try {
-                const response = await fetch('/api/rental');
-                const items = await response.json();
-                allRentalItems = items;
-                const grid = document.getElementById('rental-grid');
-                
-                grid.innerHTML = items.map((item, index) => `
-                    <div class="product-card">
-                        <div class="product-icon">
-                            ${item.availability ? '' : '<span class="product-badge">Out of Stock</span>'}
-                            👗
-                        </div>
-                        <div class="product-content">
-                            <h3 class="product-title">${item.name}</h3>
-                            <p class="product-description">${item.description}</p>
-                            <div class="product-price">₹${item.dailyRentalPrice.toLocaleString()}/day</div>
-                            <button class="btn btn-primary" style="margin-top: 1rem; width: 100%;" onclick="addItemToCart('rental', ${index})">Add to Cart</button>
-                        </div>
-                    </div>
-                `).join('');
-            } catch (error) {
-                console.error('Error loading rental items:', error);
-            }
-        }
-
-        function addItemToCart(type, index) {
-            if (type === 'kit') {
-                const kit = allRitualKits[index];
-                addToCart(kit, kit.category);
-            } else {
-                const item = allRentalItems[index];
-                addToCart(item, item.category);
-            }
-        }
     </script>
 </body>
 </html>
